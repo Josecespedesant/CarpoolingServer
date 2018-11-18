@@ -1,4 +1,4 @@
-package graphStructure;
+package graph;
 /**
  * 
  * @author David Azofeifa

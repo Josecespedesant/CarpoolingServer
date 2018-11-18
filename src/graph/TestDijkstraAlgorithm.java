@@ -1,18 +1,14 @@
-package graphStructure;
+package graph;
 
-import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.Test;
-
 public class TestDijkstraAlgorithm {
 	private List<Vertex> nodes;
 	private List<Edge> edges;
 
-	@Test
 	public void testExecute() {
 		nodes = new ArrayList<Vertex>();
 		edges = new ArrayList<Edge>();
@@ -40,9 +36,6 @@ public class TestDijkstraAlgorithm {
 		DijkstraAlgorithm dijkstra = new DijkstraAlgorithm(graph);
 		dijkstra.execute(nodes.get(0));
 		LinkedList<Vertex> path = dijkstra.getPath(nodes.get(10));
-
-		assertNotNull(path);
-		assertTrue(path.size() > 0);
 
 		for (Vertex vertex : path) {
 			System.out.println(vertex);
