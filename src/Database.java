@@ -1,5 +1,5 @@
 public class Database {
-
+    /*
     private LinekdList amigos;
     private boolean isFull;
 
@@ -18,4 +18,5 @@ public class Database {
     public void setFull(boolean full) {
         isFull = full;
     }
+    */
 }

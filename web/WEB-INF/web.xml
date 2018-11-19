@@ -153,4 +153,73 @@
         Servlets Estudiante
     -->
 
+    <servlet>
+        <servlet-name>AmigosEstudianteServlet</servlet-name>
+        <servlet-class>servlets.student.AmigosEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AmigosEstudianteServlet</servlet-name>
+        <url-pattern>/amigos-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CalificacionConductorServlet</servlet-name>
+        <servlet-class>servlets.student.CalificacionConductorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CalificacionConductorServlet</servlet-name>
+        <url-pattern>/calificacion-conductor-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CarpoolingAmigoServlet</servlet-name>
+        <servlet-class>servlets.student.CarpoolingAmigo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CarpoolingAmigoServlet</servlet-name>
+        <url-pattern>/carpooling-amigo-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CarpoolingNormalServlet</servlet-name>
+        <servlet-class>servlets.student.CarpoolingNormalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CarpoolingNormalServlet</servlet-name>
+        <url-pattern>/carpooling-normal-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IngresoEstudianteServlet</servlet-name>
+        <servlet-class>servlets.student.IngresoEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IngresoEstudianteServlet</servlet-name>
+        <url-pattern>/ingreso-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PromedioEstudianteServlet</servlet-name>
+        <servlet-class>servlets.student.PromedioEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PromedioEstudianteServlet</servlet-name>
+        <url-pattern>/promedio-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegistroEstudianteServlet</servlet-name>
+        <servlet-class>servlets.student.RegistroEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistroEstudianteServlet</servlet-name>
+        <url-pattern>/registro-estudiante</url-pattern>
+    </servlet-mapping>
 </web-app>
