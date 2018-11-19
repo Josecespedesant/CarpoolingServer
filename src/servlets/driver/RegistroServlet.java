@@ -1,5 +1,7 @@
 package servlets.driver;
 
+import databases.DriverDB;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +18,12 @@ public class RegistroServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String json = request.getParameter("json");
+
+        DriverDB driverDB = new DriverDB();
+        driverDB.RegistrarConductor(json);
+
     }
 
 }

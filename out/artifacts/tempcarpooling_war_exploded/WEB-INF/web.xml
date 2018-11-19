@@ -3,13 +3,223 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!--
+        Servlets Genrales
+    -->
     <servlet>
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>servlets.TestServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/testservlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Top5Servlet</servlet-name>
+        <servlet-class>servlets.Top5Servlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Top5Servlet</servlet-name>
+        <url-pattern>/top5</url-pattern>
+    </servlet-mapping>
+
+    <!--
+        Servlets Conductor
+    -->
+    <servlet>
+        <servlet-name>AmigosServlet</servlet-name>
+        <servlet-class>servlets.driver.AmigosServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AmigosServlet</servlet-name>
+        <url-pattern>/amigos-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AnadirAmigoServlet</servlet-name>
+        <servlet-class>servlets.driver.AnadirAmigoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AnadirAmigoServlet</servlet-name>
+        <url-pattern>/anadir-amigo-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AsientosDisponiblesServlet</servlet-name>
+        <servlet-class>servlets.driver.AsientosDisponiblesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AsientosDisponiblesServlet</servlet-name>
+        <url-pattern>/asientos-disponibles-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CalificacionEstudianteServlet</servlet-name>
+        <servlet-class>servlets.driver.CalificacionEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CalificacionEstudianteServlet</servlet-name>
+        <url-pattern>/calificacion-estudiante-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EstudiantesEnViajeServlet</servlet-name>
+        <servlet-class>servlets.driver.EstudiantesEnViajeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EstudiantesEnViajeServlet</servlet-name>
+        <url-pattern>/estudiantes-viajes-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ETAServlet</servlet-name>
+        <servlet-class>servlets.driver.ETAServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ETAServlet</servlet-name>
+        <url-pattern>/eta-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IngresoServlet</servlet-name>
+        <servlet-class>servlets.driver.IngresoServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IngresoServlet</servlet-name>
+        <url-pattern>/ingreso-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PosConductorServlett</servlet-name>
+        <servlet-class>servlets.driver.PosConductorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PosConductorServlett</servlet-name>
+        <url-pattern>/pos-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PromedioServlet</servlet-name>
+        <servlet-class>servlets.driver.PromedioServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PromedioServlet</servlet-name>
+        <url-pattern>/promedio-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegistroServlet</servlet-name>
+        <servlet-class>servlets.driver.RegistroServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistroServlet</servlet-name>
+        <url-pattern>/registro-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViajeAmigosServlet</servlet-name>
+        <servlet-class>servlets.driver.ViajeAmigosServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViajeAmigosServlet</servlet-name>
+        <url-pattern>/viaje-amigos-conductor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViajeSinDesviosServlet</servlet-name>
+        <servlet-class>servlets.driver.ViajeSinDesviosServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViajeSinDesviosServlet</servlet-name>
+        <url-pattern>/viaje-sin-desvios-condcutor</url-pattern>
+    </servlet-mapping>
+
+    <!--
+        Servlets Estudiante
+    -->
+
+    <servlet>
+        <servlet-name>AmigosEstudianteServlet</servlet-name>
+        <servlet-class>servlets.student.AmigosEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AmigosEstudianteServlet</servlet-name>
+        <url-pattern>/amigos-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CalificacionConductorServlet</servlet-name>
+        <servlet-class>servlets.student.CalificacionConductorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CalificacionConductorServlet</servlet-name>
+        <url-pattern>/calificacion-conductor-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CarpoolingAmigoServlet</servlet-name>
+        <servlet-class>servlets.student.CarpoolingAmigo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CarpoolingAmigoServlet</servlet-name>
+        <url-pattern>/carpooling-amigo-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CarpoolingNormalServlet</servlet-name>
+        <servlet-class>servlets.student.CarpoolingNormalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CarpoolingNormalServlet</servlet-name>
+        <url-pattern>/carpooling-normal-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>IngresoEstudianteServlet</servlet-name>
+        <servlet-class>servlets.student.IngresoEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IngresoEstudianteServlet</servlet-name>
+        <url-pattern>/ingreso-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PromedioEstudianteServlet</servlet-name>
+        <servlet-class>servlets.student.PromedioEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PromedioEstudianteServlet</servlet-name>
+        <url-pattern>/promedio-estudiante</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegistroEstudianteServlet</servlet-name>
+        <servlet-class>servlets.student.RegistroEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegistroEstudianteServlet</servlet-name>
+        <url-pattern>/registro-estudiante</url-pattern>
     </servlet-mapping>
 </web-app>

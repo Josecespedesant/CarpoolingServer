@@ -9,24 +9,25 @@ import java.util.LinkedList;
  */
 public class Conductor {
 
-        private String name;
+        private String nombre;
         private String contrasena;
         private LinkedList<Estudiante> amigos;
         private double promedio;
 
-        public Conductor(String name, String contrasena) {
-            this.name = name;
+        public Conductor(String nombre, String contrasena) {
+            this.nombre = nombre;
             this.contrasena = contrasena;
+            this.amigos = new LinkedList<Estudiante>();
         }
 
         public Conductor(String name, String contrasena, LinkedList<Estudiante> amigos, double promedio) {
-            this.name = name;
+            this.nombre = name;
             this.contrasena = contrasena;
             this.amigos = amigos;
             this.promedio = promedio;
         }
 
-        public String getName() { return name; }
+        public String getNombre() { return nombre; }
 
         public String getContrasena() { return contrasena; }
 
