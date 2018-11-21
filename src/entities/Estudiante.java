@@ -9,24 +9,31 @@ import java.util.LinkedList;
  */
 public class Estudiante {
 
-    private String name;
+    private String nombre;
     private String contrasena;
+    private String carnet;
     private LinkedList<Conductor> amigos;
+    private int viajesRealizados;
     private double promedio;
 
-    public Estudiante(String name, String contrasena) {
-        this.name = name;
+    public Estudiante(String nombre, String contrasena, String carnet) {
+        this.nombre = nombre;
+        this.carnet =carnet;
+        this.viajesRealizados = 0;
+        this.amigos = new LinkedList<Conductor>();
         this.contrasena = contrasena;
     }
 
-    public Estudiante(String name, String contrasena, LinkedList<Conductor> amigos, double promedio) {
-        this.name = name;
+    public Estudiante(String nombre, String contrasena, String carnet, int viajesRealizados, LinkedList<Conductor> amigos, double promedio) {
+        this.nombre = nombre;
+        this.carnet = carnet;
+        this.viajesRealizados = viajesRealizados;
         this.contrasena = contrasena;
         this.amigos = amigos;
         this.promedio = promedio;
     }
 
-    public String getName() { return name; }
+    public String getNombre() { return nombre; }
 
     public String getContrasena() { return contrasena; }
 

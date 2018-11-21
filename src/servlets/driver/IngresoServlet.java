@@ -1,5 +1,7 @@
 package servlets.driver;
 
+import databases.UserDB;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,8 +16,26 @@ import java.io.IOException;
  */
 public class IngresoServlet extends HttpServlet {
 
+    private UserDB userDB = new UserDB();
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String json = request.getParameter("json");
+
+        if (this.userDB.ConductorExiste(json)) {
+            if (this.userDB.IngresarConductor("json")) {
+                // TODO devolver ingreso exitoso e info ubicaciones
+            }
+            else {
+                // TODO devolver "contrasena" incorrecta
+            }
+        }
+        else {
+            // TODO  devolver que conductor no existe
+        }
+
+
     }
 
 }

@@ -1,6 +1,6 @@
 package servlets.driver;
 
-import databases.DriverDB;
+import databases.UserDB;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -16,14 +16,17 @@ import java.io.IOException;
  */
 public class RegistroServlet extends HttpServlet {
 
+    private UserDB userDB = new UserDB();
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String json = request.getParameter("json");
-
-        DriverDB driverDB = new DriverDB();
-        driverDB.RegistrarConductor(json);
-
+        if (!this.userDB.ConductorExiste(json))
+            this.userDB.RegistrarConductor(json);
+        else {
+            // TODO devolver que usuario ya existe
+        }
     }
 
 }

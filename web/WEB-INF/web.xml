@@ -8,21 +8,21 @@
         Servlets Genrales
     -->
     <servlet>
-        <servlet-name>TestServlet</servlet-name>
+        <servlet-nombre>TestServlet</servlet-nombre>
         <servlet-class>servlets.TestServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>TestServlet</servlet-name>
+        <servlet-nombre>TestServlet</servlet-nombre>
         <url-pattern>/testservlet</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>Top5Servlet</servlet-name>
+        <servlet-nombre>Top5Servlet</servlet-nombre>
         <servlet-class>servlets.Top5Servlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Top5Servlet</servlet-name>
+        <servlet-nombre>Top5Servlet</servlet-nombre>
         <url-pattern>/top5</url-pattern>
     </servlet-mapping>
 
@@ -30,122 +30,122 @@
         Servlets Conductor
     -->
     <servlet>
-        <servlet-name>AmigosServlet</servlet-name>
+        <servlet-nombre>AmigosServlet</servlet-nombre>
         <servlet-class>servlets.driver.AmigosServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>AmigosServlet</servlet-name>
+        <servlet-nombre>AmigosServlet</servlet-nombre>
         <url-pattern>/amigos-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>AnadirAmigoServlet</servlet-name>
+        <servlet-nombre>AnadirAmigoServlet</servlet-nombre>
         <servlet-class>servlets.driver.AnadirAmigoServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>AnadirAmigoServlet</servlet-name>
+        <servlet-nombre>AnadirAmigoServlet</servlet-nombre>
         <url-pattern>/anadir-amigo-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>AsientosDisponiblesServlet</servlet-name>
+        <servlet-nombre>AsientosDisponiblesServlet</servlet-nombre>
         <servlet-class>servlets.driver.AsientosDisponiblesServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>AsientosDisponiblesServlet</servlet-name>
+        <servlet-nombre>AsientosDisponiblesServlet</servlet-nombre>
         <url-pattern>/asientos-disponibles-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>CalificacionEstudianteServlet</servlet-name>
+        <servlet-nombre>CalificacionEstudianteServlet</servlet-nombre>
         <servlet-class>servlets.driver.CalificacionEstudianteServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>CalificacionEstudianteServlet</servlet-name>
+        <servlet-nombre>CalificacionEstudianteServlet</servlet-nombre>
         <url-pattern>/calificacion-estudiante-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>EstudiantesEnViajeServlet</servlet-name>
+        <servlet-nombre>EstudiantesEnViajeServlet</servlet-nombre>
         <servlet-class>servlets.driver.EstudiantesEnViajeServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>EstudiantesEnViajeServlet</servlet-name>
+        <servlet-nombre>EstudiantesEnViajeServlet</servlet-nombre>
         <url-pattern>/estudiantes-viajes-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ETAServlet</servlet-name>
+        <servlet-nombre>ETAServlet</servlet-nombre>
         <servlet-class>servlets.driver.ETAServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>ETAServlet</servlet-name>
+        <servlet-nombre>ETAServlet</servlet-nombre>
         <url-pattern>/eta-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>IngresoServlet</servlet-name>
+        <servlet-nombre>IngresoServlet</servlet-nombre>
         <servlet-class>servlets.driver.IngresoServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>IngresoServlet</servlet-name>
+        <servlet-nombre>IngresoServlet</servlet-nombre>
         <url-pattern>/ingreso-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PosConductorServlett</servlet-name>
+        <servlet-nombre>PosConductorServlett</servlet-nombre>
         <servlet-class>servlets.driver.PosConductorServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>PosConductorServlett</servlet-name>
+        <servlet-nombre>PosConductorServlett</servlet-nombre>
         <url-pattern>/pos-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PromedioServlet</servlet-name>
+        <servlet-nombre>PromedioServlet</servlet-nombre>
         <servlet-class>servlets.driver.PromedioServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>PromedioServlet</servlet-name>
+        <servlet-nombre>PromedioServlet</servlet-nombre>
         <url-pattern>/promedio-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>RegistroServlet</servlet-name>
+        <servlet-nombre>RegistroServlet</servlet-nombre>
         <servlet-class>servlets.driver.RegistroServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>RegistroServlet</servlet-name>
+        <servlet-nombre>RegistroServlet</servlet-nombre>
         <url-pattern>/registro-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ViajeAmigosServlet</servlet-name>
+        <servlet-nombre>ViajeAmigosServlet</servlet-nombre>
         <servlet-class>servlets.driver.ViajeAmigosServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>ViajeAmigosServlet</servlet-name>
+        <servlet-nombre>ViajeAmigosServlet</servlet-nombre>
         <url-pattern>/viaje-amigos-conductor</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ViajeSinDesviosServlet</servlet-name>
+        <servlet-nombre>ViajeSinDesviosServlet</servlet-nombre>
         <servlet-class>servlets.driver.ViajeSinDesviosServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>ViajeSinDesviosServlet</servlet-name>
+        <servlet-nombre>ViajeSinDesviosServlet</servlet-nombre>
         <url-pattern>/viaje-sin-desvios-condcutor</url-pattern>
     </servlet-mapping>
 
@@ -154,72 +154,72 @@
     -->
 
     <servlet>
-        <servlet-name>AmigosEstudianteServlet</servlet-name>
+        <servlet-nombre>AmigosEstudianteServlet</servlet-nombre>
         <servlet-class>servlets.student.AmigosEstudianteServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>AmigosEstudianteServlet</servlet-name>
+        <servlet-nombre>AmigosEstudianteServlet</servlet-nombre>
         <url-pattern>/amigos-estudiante</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>CalificacionConductorServlet</servlet-name>
+        <servlet-nombre>CalificacionConductorServlet</servlet-nombre>
         <servlet-class>servlets.student.CalificacionConductorServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>CalificacionConductorServlet</servlet-name>
+        <servlet-nombre>CalificacionConductorServlet</servlet-nombre>
         <url-pattern>/calificacion-conductor-estudiante</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>CarpoolingAmigoServlet</servlet-name>
+        <servlet-nombre>CarpoolingAmigoServlet</servlet-nombre>
         <servlet-class>servlets.student.CarpoolingAmigo</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>CarpoolingAmigoServlet</servlet-name>
+        <servlet-nombre>CarpoolingAmigoServlet</servlet-nombre>
         <url-pattern>/carpooling-amigo-estudiante</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>CarpoolingNormalServlet</servlet-name>
+        <servlet-nombre>CarpoolingNormalServlet</servlet-nombre>
         <servlet-class>servlets.student.CarpoolingNormalServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>CarpoolingNormalServlet</servlet-name>
+        <servlet-nombre>CarpoolingNormalServlet</servlet-nombre>
         <url-pattern>/carpooling-normal-estudiante</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>IngresoEstudianteServlet</servlet-name>
+        <servlet-nombre>IngresoEstudianteServlet</servlet-nombre>
         <servlet-class>servlets.student.IngresoEstudianteServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>IngresoEstudianteServlet</servlet-name>
+        <servlet-nombre>IngresoEstudianteServlet</servlet-nombre>
         <url-pattern>/ingreso-estudiante</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PromedioEstudianteServlet</servlet-name>
+        <servlet-nombre>PromedioEstudianteServlet</servlet-nombre>
         <servlet-class>servlets.student.PromedioEstudianteServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>PromedioEstudianteServlet</servlet-name>
+        <servlet-nombre>PromedioEstudianteServlet</servlet-nombre>
         <url-pattern>/promedio-estudiante</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>RegistroEstudianteServlet</servlet-name>
+        <servlet-nombre>RegistroEstudianteServlet</servlet-nombre>
         <servlet-class>servlets.student.RegistroEstudianteServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>RegistroEstudianteServlet</servlet-name>
+        <servlet-nombre>RegistroEstudianteServlet</servlet-nombre>
         <url-pattern>/registro-estudiante</url-pattern>
     </servlet-mapping>
 </web-app>

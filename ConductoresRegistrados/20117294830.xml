@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conductor>
+  <nombre>panchita</nombre>
+  <contrasena>something</contrasena>
+  <carnet>20117294830</carnet>
+  <amigos>
+    <amigo>20164321</amigo>
+  </amigos>
+  <promedio>0</promedio>
+</conductor>
