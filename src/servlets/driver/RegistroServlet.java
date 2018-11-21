@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Se encarga de tomar info de registro de un nuevo conductor.
@@ -22,10 +23,19 @@ public class RegistroServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String json = request.getParameter("json");
+
+        response.setContentType("text/plain");
+        PrintWriter out=response.getWriter();
+
         if (!this.userDB.ConductorExiste(json))
-            this.userDB.RegistrarConductor(json);
+            if (this.userDB.RegistrarConductor(json)) {
+                out.print("{\"exitoso\": true}");
+            }
+            else {
+                out.print("{\"exitoso\": false}");
+            }
         else {
-            // TODO devolver que usuario ya existe
+            out.print("{\"exitoso\": \"yaExiste\"}");
         }
     }
 

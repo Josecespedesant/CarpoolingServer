@@ -14,19 +14,22 @@ public class Estudiante {
     private String carnet;
     private LinkedList<Conductor> amigos;
     private int viajesRealizados;
+    private int numCalificaciones;
     private double promedio;
 
     public Estudiante(String nombre, String contrasena, String carnet) {
         this.nombre = nombre;
         this.carnet =carnet;
         this.viajesRealizados = 0;
+        this.numCalificaciones = 0;
         this.amigos = new LinkedList<Conductor>();
         this.contrasena = contrasena;
     }
 
-    public Estudiante(String nombre, String contrasena, String carnet, int viajesRealizados, LinkedList<Conductor> amigos, double promedio) {
+    public Estudiante(String nombre, String contrasena, String carnet, int numCalificaciones, int viajesRealizados, LinkedList<Conductor> amigos, double promedio) {
         this.nombre = nombre;
         this.carnet = carnet;
+        this.numCalificaciones = numCalificaciones;
         this.viajesRealizados = viajesRealizados;
         this.contrasena = contrasena;
         this.amigos = amigos;

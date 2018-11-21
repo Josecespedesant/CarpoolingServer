@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Se encarga de recibir la informacion de inicio de sesion de un conductor.
@@ -23,19 +24,20 @@ public class IngresoServlet extends HttpServlet {
 
         String json = request.getParameter("json");
 
+        response.setContentType("text/plain");
+        PrintWriter out=response.getWriter();
+
         if (this.userDB.ConductorExiste(json)) {
             if (this.userDB.IngresarConductor("json")) {
-                // TODO devolver ingreso exitoso e info ubicaciones
+                out.print("{\"exitoso\": true}");
             }
             else {
-                // TODO devolver "contrasena" incorrecta
+                out.print("{\"exitoso\": false}");
             }
         }
         else {
-            // TODO  devolver que conductor no existe
+            out.print("{\"exitoso\": \"noExiste\"}");
         }
-
-
     }
 
 }

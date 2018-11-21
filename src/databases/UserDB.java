@@ -26,7 +26,9 @@ public class UserDB {
      * @param json
      * @throws IOException
      */
-    public void RegistrarConductor(String json) throws IOException {
+    public boolean RegistrarConductor(String json) throws IOException {
+       boolean registrado = false;
+
         Element conductor = new Element("conductor");
         Document doc = new Document();
         doc.setRootElement(conductor);
@@ -34,30 +36,40 @@ public class UserDB {
         JsonParser jsonParser = new JsonParser();
         JsonObject jsonObject = jsonParser.parse(json).getAsJsonObject();
 
-        String nombre = jsonObject.getAsJsonPrimitive("nombre").getAsString();
-        Element nombreElment = new Element("nombre");
-        nombreElment.addContent(nombre);
+        if (this.ConductorExiste(json)) {
 
-        String contrasena = jsonObject.getAsJsonPrimitive("contrasena").getAsString();
-        Element contrasenaElement = new Element("contrasena");
-        contrasenaElement.addContent(contrasena);
+            String nombre = jsonObject.getAsJsonPrimitive("nombre").getAsString();
+            Element nombreElment = new Element("nombre");
+            nombreElment.addContent(nombre);
 
-        String carnet = jsonObject.getAsJsonPrimitive("carnet").getAsString();
-        Element carnetElement = new Element("carnet");
-        carnetElement.addContent(carnet);
+            String contrasena = jsonObject.getAsJsonPrimitive("contrasena").getAsString();
+            Element contrasenaElement = new Element("contrasena");
+            contrasenaElement.addContent(contrasena);
 
-        Element amigosElement = new Element("amigos");
-        Element promedioElement = new Element("promedio");
-        promedioElement.addContent("0");
+            String carnet = jsonObject.getAsJsonPrimitive("carnet").getAsString();
+            Element carnetElement = new Element("carnet");
+            carnetElement.addContent(carnet);
 
-        conductor.addContent(nombreElment);
-        conductor.addContent(contrasenaElement);
-        conductor.addContent(carnetElement);
-        conductor.addContent(amigosElement);
-        conductor.addContent(promedioElement);
+            Element amigosElement = new Element("amigos");
+            Element promedioElement = new Element("promedio");
+            promedioElement.addContent("0");
+            Element numCalificaciones = new Element("numCalificaciones");
+            numCalificaciones.addContent("0");
 
-        // TODO hacer que no depende de un pathConductores especifico.
-        Conversion.saveXMLToDisk(doc, this.pathConductores +carnet+".xml");
+            conductor.addContent(nombreElment);
+            conductor.addContent(contrasenaElement);
+            conductor.addContent(carnetElement);
+            conductor.addContent(amigosElement);
+            conductor.addContent(promedioElement);
+            conductor.addContent(numCalificaciones);
+
+            // TODO hacer que no depende de un pathConductores especifico.
+            Conversion.saveXMLToDisk(doc, this.pathConductores +carnet+".xml");
+
+            registrado = true;
+        }
+
+        return registrado;
     }
 
 
@@ -67,7 +79,9 @@ public class UserDB {
      * @param json
      * @throws IOException
      */
-    public void RegistrarEstudiante(String json) throws IOException {
+    public boolean RegistrarEstudiante(String json) throws IOException {
+        boolean registrado = false;
+
         Element estudiante = new Element("estudiante");
         Document doc = new Document();
         doc.setRootElement(estudiante);
@@ -75,32 +89,42 @@ public class UserDB {
         JsonParser jsonParser = new JsonParser();
         JsonObject jsonObject = jsonParser.parse(json).getAsJsonObject();
 
-        String nombre = jsonObject.getAsJsonPrimitive("nombre").getAsString();
-        Element nombreElment = new Element("nombre");
-        nombreElment.addContent(nombre);
+        if (this.EstudianteExiste(json)) {
 
-        String contrasena = jsonObject.getAsJsonPrimitive("contrasena").getAsString();
-        Element contrasenaElement = new Element("contrasena");
-        contrasenaElement.addContent(contrasena);
+            String nombre = jsonObject.getAsJsonPrimitive("nombre").getAsString();
+            Element nombreElment = new Element("nombre");
+            nombreElment.addContent(nombre);
 
-        String carnet = jsonObject.getAsJsonPrimitive("carnet").getAsString();
-        Element carnetElement = new Element("carnet");
-        carnetElement.addContent(carnet);
+            String contrasena = jsonObject.getAsJsonPrimitive("contrasena").getAsString();
+            Element contrasenaElement = new Element("contrasena");
+            contrasenaElement.addContent(contrasena);
 
-        Element amigosElement = new Element("amigos");
-        Element promedioElement = new Element("promedio");
-        promedioElement.addContent("0");
-        Element viajesRealizadosElement = new Element("viajesRealizados");
-        viajesRealizadosElement.addContent("0");
+            String carnet = jsonObject.getAsJsonPrimitive("carnet").getAsString();
+            Element carnetElement = new Element("carnet");
+            carnetElement.addContent(carnet);
 
-        estudiante.addContent(nombreElment);
-        estudiante.addContent(contrasenaElement);
-        estudiante.addContent(carnetElement);
-        estudiante.addContent(amigosElement);
-        estudiante.addContent(promedioElement);
+            Element amigosElement = new Element("amigos");
+            Element promedioElement = new Element("promedio");
+            promedioElement.addContent("0");
+            Element viajesRealizadosElement = new Element("viajesRealizados");
+            viajesRealizadosElement.addContent("0");
+            Element numCalificaciones = new Element("numCalificaciones");
+            numCalificaciones.addContent("0");
 
-        // TODO hacer que no depende de un pathConductores especifico.
-        Conversion.saveXMLToDisk(doc, this.pathEstudiantes +carnet+".xml");
+            estudiante.addContent(nombreElment);
+            estudiante.addContent(contrasenaElement);
+            estudiante.addContent(carnetElement);
+            estudiante.addContent(amigosElement);
+            estudiante.addContent(promedioElement);
+            estudiante.addContent(numCalificaciones);
+
+            // TODO hacer que no depende de un pathConductores especifico.
+            Conversion.saveXMLToDisk(doc, this.pathEstudiantes +carnet+".xml");
+
+            registrado = true;
+        }
+
+        return registrado;
     }
 
     /**
@@ -146,7 +170,7 @@ public class UserDB {
      * Comprueba la contrasena de un conductor determinado.
      *
      * @param json
-     * @return
+     * @return exito de ingresar conductor
      */
     public boolean IngresarConductor(String json) {
         boolean ingresoExitoso = false;
@@ -159,6 +183,40 @@ public class UserDB {
 
         try {
             doc = builder.build(new File(this.pathConductores + jsonObject.getAsJsonPrimitive("carnet").getAsString()
+                    + ".xml"));
+        }
+        catch (JDOMException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // Comprueba si informacion de usuario ya registrado es corresponde a informacion de inicio de sesion.
+        if (doc.getRootElement().getChildText("carnet").equals(jsonObject.getAsJsonPrimitive("carnet").getAsString())
+                && doc.getRootElement().getChildText("contrasena").equals(jsonObject.getAsJsonPrimitive("contrasena").getAsString())) {
+            ingresoExitoso = true;
+        }
+
+        return ingresoExitoso;
+    }
+
+    /**
+     * Comprueba la contrasena de un estudiante determinado.
+     *
+     * @param json
+     * @return exito de ingresar estudiante
+     */
+    public boolean IngresarEstudiante(String json) {
+        boolean ingresoExitoso = false;
+
+        JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
+
+        // Obtiene archivo de disco y lo convierte a objeto jdom
+        SAXBuilder builder = new SAXBuilder();
+        Document doc = null;
+
+        try {
+            doc = builder.build(new File(this.pathEstudiantes + jsonObject.getAsJsonPrimitive("carnet").getAsString()
                     + ".xml"));
         }
         catch (JDOMException e) {
@@ -222,6 +280,58 @@ public class UserDB {
 
     }
 
+    public void calificarConductor(String json) throws JDOMException, IOException {
+        JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
+
+        String carnet = jsonObject.getAsJsonPrimitive("carnet").getAsString();
+
+        Document doc = Conversion.getXMLFromDisk(this.pathConductores+carnet+".xml");
+
+        String promedio = doc.getRootElement().getChildText("promedio");
+        String numCalificaciones = doc.getRootElement().getChildText("numCalificaciones");
+
+        int calificacion = jsonObject.getAsJsonPrimitive("calificacion").getAsInt();
+        double promedioDouble = Double.parseDouble(promedio);
+        int numCalificacionesInt = Integer.parseInt(numCalificaciones);
+
+        double nuevoPromedio = ((promedioDouble*numCalificacionesInt) + calificacion) / (numCalificacionesInt+1);
+        numCalificacionesInt++;
+
+        doc.getRootElement().getChild("promedio").removeContent();
+        doc.getRootElement().getChild("promedio").addContent(String.valueOf(nuevoPromedio));
+        doc.getRootElement().getChild("numCalificaciones").removeContent();
+        doc.getRootElement().getChild("numCalificaciones").addContent(String.valueOf(numCalificacionesInt));
+
+        Conversion.saveXMLToDisk(doc, this.pathConductores+carnet+".xml");
+    }
+
+    public void calificarEstudiante(String json) throws JDOMException, IOException {
+
+        JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
+
+        String carnet = jsonObject.getAsJsonPrimitive("carnet").getAsString();
+
+        Document doc = Conversion.getXMLFromDisk(this.pathEstudiantes+carnet+".xml");
+
+        String promedio = doc.getRootElement().getChildText("promedio");
+        String numCalificaciones = doc.getRootElement().getChildText("numCalificaciones");
+
+        int calificacion = jsonObject.getAsJsonPrimitive("calificacion").getAsInt();
+        double promedioDouble = Double.parseDouble(promedio);
+        int numCalificacionesInt = Integer.parseInt(numCalificaciones);
+
+        double nuevoPromedio = ((promedioDouble*numCalificacionesInt) + calificacion) / (numCalificacionesInt+1);
+        numCalificacionesInt++;
+
+        doc.getRootElement().getChild("promedio").removeContent();
+        doc.getRootElement().getChild("promedio").addContent(String.valueOf(nuevoPromedio));
+        doc.getRootElement().getChild("numCalificaciones").removeContent();
+        doc.getRootElement().getChild("numCalificaciones").addContent(String.valueOf(numCalificacionesInt));
+
+        Conversion.saveXMLToDisk(doc, this.pathEstudiantes+carnet+".xml");
+
+    }
+
     public static void main(String[] args) throws IOException, JDOMException {
 
         UserDB userDB = new UserDB();
@@ -232,7 +342,11 @@ public class UserDB {
         Conductor conductor = new Conductor("panchita", "something","20117294830");
         userDB.RegistrarConductor(gson.toJson(conductor));
 
-        System.out.println(userDB.anadirAmigo("{\"miCarnet\": 20117294830, \"carnetAmigo\": 20164321}"));
+        userDB.anadirAmigo("{\"miCarnet\": 20117294830, \"carnetAmigo\": 20164321}");
+
+        userDB.calificarEstudiante("{\"carnet\": 20164321, \"calificacion\": 5}");
+        userDB.calificarConductor("{\"carnet\": 20117294830, \"calificacion\": 5}");
+        userDB.calificarConductor("{\"carnet\": 20117294830, \"calificacion\": 2}");
 
     }
 

@@ -13,17 +13,20 @@ public class Conductor {
         private String contrasena;
         private String carnet;
         private LinkedList<Estudiante> amigos;
+        private int numCalificaciones;
         private double promedio;
 
         public Conductor(String nombre, String contrasena, String carnet) {
             this.nombre = nombre;
             this.contrasena = contrasena;
             this.carnet = carnet;
+            this.numCalificaciones = 0;
             this.amigos = new LinkedList<Estudiante>();
         }
 
-        public Conductor(String name, String contrasena, String carnet, LinkedList<Estudiante> amigos, double promedio) {
+        public Conductor(String name, String contrasena, int numCalificaciones, String carnet, LinkedList<Estudiante> amigos, double promedio) {
             this.nombre = name;
+            this.numCalificaciones = numCalificaciones;
             this.contrasena = contrasena;
             this.carnet = carnet;
             this.amigos = amigos;
