@@ -35,7 +35,6 @@ public class TestDijkstraAlgorithm {
 		addLane("Edge_10", 9, 10, 40);
 		addLane("Edge_11", 1, 10, 600);
 
-		// Lets check from location Loc_1 to Loc_10
 		Graph graph = new Graph(nodes, edges);
 		DijkstraAlgorithm dijkstra = new DijkstraAlgorithm(graph);
 		dijkstra.execute(nodes.get(0));
