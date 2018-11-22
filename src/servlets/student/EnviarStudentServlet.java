@@ -7,15 +7,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * Se encarga de enviar el promedio de las calificaciones de un estudiante.
- *
- * @author David Azofeifa H.
- */
-public class PromedioEstudianteServlet extends HttpServlet {
+public class EnviarStudentServlet extends HttpServlet {
 
     UserDB userDB = new UserDB();
 
@@ -27,12 +23,15 @@ public class PromedioEstudianteServlet extends HttpServlet {
         response.setContentType("text/plain");
         PrintWriter out=response.getWriter();
 
-        try {
-            double promedio = userDB.getPromedioEstudiante(json);
-            out.print("{\"promedio\":"+promedio+"}");
-        } catch (JDOMException e) {
-            e.printStackTrace();
+        if (userDB.EstudianteExiste(json)) {
+            try {
+                String estudiante = userDB.enviarStudent(json);
+                out.print(estudiante);
+            } catch (JDOMException e) {
+                e.printStackTrace();
+            } catch (ParserConfigurationException e) {
+                e.printStackTrace();
+            }
         }
     }
-
 }

@@ -5,13 +5,23 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import entities.Conductor;
 import entities.Estudiante;
+import entities.Posicion;
 import manager.Conversion;
+import org.jdom2.Content;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
+import java.util.Iterator;
+import java.util.LinkedList;
 
 public class UserDB {
 
@@ -56,12 +66,24 @@ public class UserDB {
             Element numCalificaciones = new Element("numCalificaciones");
             numCalificaciones.addContent("0");
 
+            Element posicionHogarElement = new Element("posicionHogar");
+            JsonObject posicionHogar = jsonObject.getAsJsonObject("posicionHogar");
+            double longitud = posicionHogar.getAsJsonPrimitive("lon").getAsDouble();
+            double latitud = posicionHogar.getAsJsonPrimitive("lat").getAsDouble();
+            Element longitudElement = new Element("lon");
+            longitudElement.addContent(""+longitud);
+            Element latitudElement = new Element("lat");
+            latitudElement.addContent(""+latitud);
+            posicionHogarElement.addContent(longitudElement);
+            posicionHogarElement.addContent(latitudElement);
+
             conductor.addContent(nombreElment);
             conductor.addContent(contrasenaElement);
             conductor.addContent(carnetElement);
             conductor.addContent(amigosElement);
             conductor.addContent(promedioElement);
             conductor.addContent(numCalificaciones);
+            conductor.addContent(posicionHogarElement);
 
             // TODO hacer que no depende de un pathConductores especifico.
             Conversion.saveXMLToDisk(doc, this.pathConductores +carnet+".xml");
@@ -111,14 +133,26 @@ public class UserDB {
             Element numCalificaciones = new Element("numCalificaciones");
             numCalificaciones.addContent("0");
 
+            Element posicionHogarElement = new Element("posicionHogar");
+            JsonObject posicionHogar = jsonObject.getAsJsonObject("posicionHogar");
+            double longitud = posicionHogar.getAsJsonPrimitive("lon").getAsDouble();
+            double latitud = posicionHogar.getAsJsonPrimitive("lat").getAsDouble();
+            Element longitudElement = new Element("lon");
+            longitudElement.addContent(""+longitud);
+            Element latitudElement = new Element("lat");
+            latitudElement.addContent(""+latitud);
+            posicionHogarElement.addContent(longitudElement);
+            posicionHogarElement.addContent(latitudElement);
+
             estudiante.addContent(nombreElment);
             estudiante.addContent(contrasenaElement);
             estudiante.addContent(carnetElement);
             estudiante.addContent(amigosElement);
             estudiante.addContent(promedioElement);
             estudiante.addContent(numCalificaciones);
+            estudiante.addContent(posicionHogarElement);
 
-            // TODO hacer que no depende de un pathConductores especifico.
+            // TODO hacer que no dependa de un pathConductores especifico.
             Conversion.saveXMLToDisk(doc, this.pathEstudiantes +carnet+".xml");
 
             registrado = true;
@@ -367,14 +401,66 @@ public class UserDB {
         return promedio;
     }
 
+    public String enviarStudent(String json) throws JDOMException, IOException, ParserConfigurationException {
+        String student = "";
+        if (this.EstudianteExiste(json)) {
+            JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
+            Document doc = Conversion.getXMLFromDisk(
+                    this.pathEstudiantes+jsonObject.getAsJsonPrimitive("carnet")+".xml");
+
+            String nombre = doc.getRootElement().getChildText("nombre");
+            String contrasena = doc.getRootElement().getChildText("contrasena");
+            String carnet = doc.getRootElement().getChildText("carnet");
+            int viajesRealizados = Integer.valueOf(doc.getRootElement().getChildText("viajesRealizados"));
+            int numCalificaciones = Integer.valueOf(doc.getRootElement().getChildText("numCalificaciones"));
+            double promedio = Double.valueOf(doc.getRootElement().getChildText("promedio"));
+            double lat = Double.valueOf(doc.getRootElement().getChild("posicionHogar").getChildText("lat"));
+            double lon = Double.valueOf(doc.getRootElement().getChild("posicionHogar").getChildText("lon"));
+            Posicion posicion = new Posicion(lat, lon);
+
+            LinkedList<Conductor> amigos = new LinkedList<>();
+
+            Gson gson = new Gson();
+
+            NodeList amigos = doc.getRootElement().getChildNodes
+
+            for (Iterator iterator = doc.getRootElement().getChild("amigos").getContent().iterator(); iterator.hasNext();) {
+                Content content = (Content) iterator.next();
+                String amigoJson = "{\"carnet\":"+content+"}";
+                amigoJson = enviarStudent(amigoJson);
+                amigoJson = gson.toJson(amigoJson);
+                amigos.add(gson.fromJson(amigoJson, Conductor.class));
+            }
+
+            Estudiante estudiante = new Estudiante(nombre, contrasena, carnet, numCalificaciones, viajesRealizados,
+                    amigos, promedio, posicion);
+            student = gson.toJson(estudiante);
+        }
+        return student;
+    }
+
+    public String enviarDriver(String json) {
+        return "";
+    }
+
     public static void main(String[] args) throws IOException, JDOMException {
 
         UserDB userDB = new UserDB();
         Gson gson = new Gson();
 
-        /*
-        Estudiante estudiante = new Estudiante("carlos", "1234", "20164321");
+        Conductor conductor = new Conductor("alexander", "sir", "1776", new Posicion(0,0));
+        userDB.RegistrarConductor(gson.toJson(conductor));
+
+        Estudiante estudiante = new Estudiante("carlos", "1234", "20164321",
+                new Posicion(3, 3));
+        System.out.println(gson.toJson(estudiante));
         userDB.RegistrarEstudiante(gson.toJson(estudiante));
+
+        userDB.anadirAmigo("{\"carnetAmigo\": 20164321, \"miCarnet\":1776}");
+
+        System.out.println(userDB.enviarDriver("{\"carnet\": 1234}"));
+
+        /*
         Conductor conductor = new Conductor("panchita", "something","20117294830");
         userDB.RegistrarConductor(gson.toJson(conductor));
 

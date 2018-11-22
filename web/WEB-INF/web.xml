@@ -29,15 +29,6 @@
     <!--
         Servlets Conductor
     -->
-    <servlet>
-        <servlet-name>AmigosServlet</servlet-name>
-        <servlet-class>servlets.driver.AmigosServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>AmigosServlet</servlet-name>
-        <url-pattern>/amigos-conductor</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>AnadirAmigoServlet</servlet-name>
@@ -110,16 +101,6 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>PromedioServlet</servlet-name>
-        <servlet-class>servlets.driver.PromedioServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>PromedioServlet</servlet-name>
-        <url-pattern>/promedio-conductor</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>RegistroServlet</servlet-name>
         <servlet-class>servlets.driver.RegistroServlet</servlet-class>
     </servlet>
@@ -152,16 +133,6 @@
     <!--
         Servlets Estudiante
     -->
-
-    <servlet>
-        <servlet-name>AmigosEstudianteServlet</servlet-name>
-        <servlet-class>servlets.student.AmigosEstudianteServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>AmigosEstudianteServlet</servlet-name>
-        <url-pattern>/amigos-estudiante</url-pattern>
-    </servlet-mapping>
 
     <servlet>
         <servlet-name>CalificacionConductorServlet</servlet-name>
@@ -201,16 +172,6 @@
     <servlet-mapping>
         <servlet-name>IngresoEstudianteServlet</servlet-name>
         <url-pattern>/ingreso-estudiante</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>PromedioEstudianteServlet</servlet-name>
-        <servlet-class>servlets.student.PromedioEstudianteServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>PromedioEstudianteServlet</servlet-name>
-        <url-pattern>/promedio-estudiante</url-pattern>
     </servlet-mapping>
 
     <servlet>

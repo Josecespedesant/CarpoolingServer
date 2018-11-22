@@ -38,7 +38,6 @@ public class AnadirAmigoServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-
     }
 
 }

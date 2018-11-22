@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<estudiante>
-  <nombre>carlos</nombre>
-  <contrasena>1234</contrasena>
-  <carnet>20164321</carnet>
+<conductor>
+  <nombre>alexander</nombre>
+  <contrasena>sir</contrasena>
+  <carnet>1776</carnet>
   <amigos>
-    <amigo>1776</amigo>
+    <amigo>20164321</amigo>
   </amigos>
   <promedio>0</promedio>
   <numCalificaciones>0</numCalificaciones>
@@ -12,4 +12,4 @@
     <lon>0.0</lon>
     <lat>0.0</lat>
   </posicionHogar>
-</estudiante>
+</conductor>
