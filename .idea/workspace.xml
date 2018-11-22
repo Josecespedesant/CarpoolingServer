@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="tempcarpooling:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e0a84d8-34d5-4350-8f06-5b9e27ad05b4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConductoresRegistrados/20117294830.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/databases/UserDB$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/databases/UserDB$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/databases/UserDB$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/databases/UserDB$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/databases/UserDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/databases/UserDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/entities/Conductor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/entities/Conductor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/entities/Estudiante.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/entities/Estudiante.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/DijkstraAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/DijkstraAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/Edge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/TestDijkstraAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/TestDijkstraAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/graph/Vertex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/manager/Conversion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/manager/Conversion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/TestServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/TestServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/Top5Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/Top5Servlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/AmigosServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/AmigosServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/AnadirAmigoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/AnadirAmigoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/AsientosDisponiblesServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/AsientosDisponiblesServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/CalificacionEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/CalificacionEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/ETAServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/ETAServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/EstudiantesEnViajeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/EstudiantesEnViajeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/IngresoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/IngresoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/PosConductorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/PosConductorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/PromedioServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/PromedioServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/RegistroServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/RegistroServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/ViajeAmigosServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/ViajeAmigosServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/ViajeSinDesviosServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/driver/ViajeSinDesviosServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/AmigosEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/AmigosEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/CalificacionConductorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/CalificacionConductorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/CarpoolingAmigo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/CarpoolingAmigo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/CarpoolingNormalServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/CarpoolingNormalServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/IngresoEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/IngresoEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/PromedioEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/PromedioEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/RegistroEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tempcarpooling_war_exploded/WEB-INF/classes/servlets/student/RegistroEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/Database.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/Database.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/databases/UserDB$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/databases/UserDB$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/databases/UserDB$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/databases/UserDB$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/databases/UserDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/databases/UserDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/entities/Conductor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/entities/Conductor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/entities/Estudiante.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/entities/Estudiante.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/graph/DijkstraAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/graph/DijkstraAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/graph/Edge.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/graph/Edge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/graph/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/graph/Graph.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/graph/TestDijkstraAlgorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/graph/TestDijkstraAlgorithm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/graph/Vertex.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/graph/Vertex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/manager/Conversion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/manager/Conversion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/TestServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/TestServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/Top5Servlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/Top5Servlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/AmigosServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/AmigosServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/AnadirAmigoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/AnadirAmigoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/AsientosDisponiblesServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/AsientosDisponiblesServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/CalificacionEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/CalificacionEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/ETAServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/ETAServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/EstudiantesEnViajeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/EstudiantesEnViajeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/IngresoServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/IngresoServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/PosConductorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/PosConductorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/PromedioServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/PromedioServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/RegistroServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/RegistroServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/ViajeAmigosServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/ViajeAmigosServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/ViajeSinDesviosServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/driver/ViajeSinDesviosServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/AmigosEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/AmigosEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/CalificacionConductorServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/CalificacionConductorServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/CarpoolingAmigo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/CarpoolingAmigo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/CarpoolingNormalServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/CarpoolingNormalServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/IngresoEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/IngresoEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/PromedioEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/PromedioEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/RegistroEstudianteServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tempcarpooling/servlets/student/RegistroEstudianteServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/databases/UserDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/databases/UserDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Conductor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Conductor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Estudiante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Estudiante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/driver/PromedioServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/driver/PromedioServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/student/PromedioEstudianteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/student/PromedioEstudianteServlet.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1010159767">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="7" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="7" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="536" />
+          <entry key="xml" value="30" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="536" />
+          <entry key="XML" value="30" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1461634787">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1523613842">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="1" />
+          <entry key="java" value="60" />
+          <entry key="xhtml" value="2" />
+          <entry key="xml" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="1" />
+          <entry key="JAVA" value="60" />
+          <entry key="XHTML" value="2" />
+          <entry key="XML" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="19" />
+          <entry key="java" value="8848" />
+          <entry key="xhtml" value="23" />
+          <entry key="xml" value="854" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="8848" />
+          <entry key="PLAIN_TEXT" value="19" />
+          <entry key="XHTML" value="23" />
+          <entry key="XML" value="854" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1396198583">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.60" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="22" />
+          <entry key="xml" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="22" />
+          <entry key="XML" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="3505" />
+          <entry key="xml" value="464" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="3505" />
+          <entry key="XML" value="464" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/databases/UserDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="372" column="31" lean-forward="true" selection-start-line="372" selection-start-column="31" selection-end-line="372" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ConductoresRegistrados/20171234.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EstudiantesRegistrados/20164321.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlets/driver/PromedioServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlets/student/PromedioEstudianteServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlets/driver/PosConductorServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/servlets/driver/RegistroServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/Conductor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="49">
+              <caret line="21" column="92" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="92" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1465#1466#0" expanded="true" />
+                <element signature="e#1528#1529#0" expanded="true" />
+                <element signature="e#1586#1587#0" expanded="true" />
+                <element signature="e#1569#1570#0" expanded="true" />
+                <element signature="e#1605#1606#0" expanded="true" />
+                <element signature="e#1665#1666#0" expanded="true" />
+                <element signature="e#1715#1716#0" expanded="true" />
+                <element signature="e#1959#1960#0" expanded="true" />
+                <element signature="e#1990#1991#0" expanded="true" />
+                <element signature="e#2038#2039#0" expanded="true" />
+                <element signature="e#2078#2079#0" expanded="true" />
+                <element signature="e#1417#1418#0" expanded="true" />
+                <element signature="e#1446#1447#0" expanded="true" />
+                <element signature="e#1483#1484#0" expanded="true" />
+                <element signature="e#1516#1517#0" expanded="true" />
+                <element signature="e#1549#1550#0" expanded="true" />
+                <element signature="e#1578#1579#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/entities/Estudiante.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="769">
+              <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+              <folding>
+                <element signature="e#1459#1460#0" expanded="true" />
+                <element signature="e#1498#1499#0" expanded="true" />
+                <element signature="e#1559#1560#0" expanded="true" />
+                <element signature="e#1615#1616#0" expanded="true" />
+                <element signature="e#1656#1657#0" expanded="true" />
+                <element signature="e#1696#1697#0" expanded="true" />
+                <element signature="e#1759#1760#0" expanded="true" />
+                <element signature="e#1817#1818#0" expanded="true" />
+                <element signature="e#1770#1771#0" expanded="true" />
+                <element signature="e#1830#1831#0" expanded="true" />
+                <element signature="e#1880#1881#0" expanded="true" />
+                <element signature="e#2190#2191#0" expanded="true" />
+                <element signature="e#2221#2222#0" expanded="true" />
+                <element signature="e#2269#2270#0" expanded="true" />
+                <element signature="e#2309#2310#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/entities/Posicion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="17" selection-start-column="17" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>anadir</find>
+      <find>Conversion</find>
+      <find>califica</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/graph/Edge.java" />
+        <option value="$PROJECT_DIR$/src/graph/TestDijkstraAlgorithm.java" />
+        <option value="$PROJECT_DIR$/web/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/TipoViajaServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/TipoViajeServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/ViajeSinDesvios.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/Top5Servlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/AmigosServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/EstudiantesEnViajeServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/ETAServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/PosConductorServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/ViajeAmigosServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/ViajeSinDesviosServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/Top5Servlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/student/CarpoolingAmigo.java" />
+        <option value="$PROJECT_DIR$/src/servlets/student/CarpoolingNormalServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/student/AmigosEstudianteServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/TestServlet.java" />
+        <option value="$PROJECT_DIR$/src/Database.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/AsientosDisponiblesServlet.java" />
+        <option value="$PROJECT_DIR$/src/xmlmanager/manager/Parse.java" />
+        <option value="$PROJECT_DIR$/src/manager/Parse.java" />
+        <option value="$PROJECT_DIR$/ConductoresRegistrados/20171234.xml" />
+        <option value="$PROJECT_DIR$/src/manager/Conversion.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/AnadirAmigoServlet.java" />
+        <option value="$PROJECT_DIR$/src/databases/DriverDB.java" />
+        <option value="$PROJECT_DIR$/ConductoresRegistrados/20117294830.xml" />
+        <option value="$PROJECT_DIR$/src/servlets/student/IngresoEstudianteServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/IngresoServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/student/RegistroEstudianteServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/student/CalificacionConductorServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/CalificacionEstudianteServlet.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/RegistroServlet.java" />
+        <option value="$PROJECT_DIR$/src/servlets/driver/PromedioServlet.java" />
+        <option value="$PROJECT_DIR$/src/databases/UserDB.java" />
+        <option value="$PROJECT_DIR$/src/servlets/student/PromedioEstudianteServlet.java" />
+        <option value="$PROJECT_DIR$/src/entities/Posicion.java" />
+        <option value="$PROJECT_DIR$/src/entities/Conductor.java" />
+        <option value="$PROJECT_DIR$/src/entities/Estudiante.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="ConductoresRegistrados" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="EstudiantesRegistrados" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="databases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="entities" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="manager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+              <item name="driver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="servlets" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarpoolingServer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarpoolingServer" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542849465846" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kugelblitz\Documents\TEC\Datos 1\S2\CarpoolingServer\lib" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kugelblitz\Documents\TEC\Datos 1\S2\CarpoolingServer\src" />
+      <recent name="C:\Users\Kugelblitz\Documents\TEC\Datos 1\S2\CarpoolingServer\src\xmlmanager" />
+      <recent name="$PROJECT_DIR$/web/WEB-INF/lib" />
+      <recent name="C:\Users\Kugelblitz\Documents\TEC\Datos 1\S2\CarpoolingServer\lib" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Conductor">
+    <configuration name="Conductor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="entities.Conductor" />
+      <module name="tempcarpooling" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="databases.UserDB" />
+      <module name="tempcarpooling" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="databases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.8" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://192.168.100.7:8080/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="tempcarpooling:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_CarpoolingServer" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49979" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="tempcarpooling:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.82" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="tempcarpooling:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_CarpoolingServer_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49979" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="tempcarpooling:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.82" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="tempcarpooling:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_CarpoolingServer_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49979" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="tempcarpooling:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Server" />
+      <item itemvalue="Tomcat Server.Unnamed" />
+      <item itemvalue="Application.UserDB" />
+      <item itemvalue="Application.Conductor" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Conductor" />
+        <item itemvalue="Application.UserDB" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e0a84d8-34d5-4350-8f06-5b9e27ad05b4" name="Default Changelist" comment="" />
+      <created>1542508423594</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1542508423594</updated>
+      <workItem from="1542508430483" duration="989000" />
+      <workItem from="1542597475432" duration="16377000" />
+      <workItem from="1542640000743" duration="3804000" />
+      <workItem from="1542650255136" duration="9350000" />
+      <workItem from="1542672727077" duration="36000" />
+      <workItem from="1542755385685" duration="20193000" />
+      <workItem from="1542843025958" duration="6114000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="58853000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1366" height="694" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29545453" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info id="Image Layers" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36395758" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3275488" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32685512" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
+    <entry file="file://$PROJECT_DIR$/src/entities.java" />
+    <entry file="file://$PROJECT_DIR$/src/graph.java" />
+    <entry file="file://$PROJECT_DIR$/src/graph/Edge.java" />
+    <entry file="file://$PROJECT_DIR$/src/graph/TestDijkstraAlgorithm.java" />
+    <entry file="file://$PROJECT_DIR$/src/graph/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/amigos/Registro.java" />
+    <entry file="file://$PROJECT_DIR$/src/graph/DijkstraAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/Top5Servlet.java" />
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/EstudiantesEnViajeServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/ETAServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/ViajeAmigosServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/ViajeSinDesviosServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/Top5Servlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/student/CarpoolingNormalServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="60" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/student/CarpoolingAmigo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="74" selection-start-line="9" selection-start-column="74" selection-end-line="9" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/student/AmigosEstudianteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/TestServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="128" column="21" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="6" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/databases/FriendDB.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15147">
+          <caret line="892" column="76" selection-start-line="892" selection-start-column="76" selection-end-line="892" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/AsientosDisponiblesServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/gson-2.8.5.jar!/com/google/gson/JsonParser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/xmlmanager/manager/Conversion.java" />
+    <entry file="file://$PROJECT_DIR$/src/xmlmanager/manager/Parse.java" />
+    <entry file="file://$PROJECT_DIR$/src/manager/Parse.java" />
+    <entry file="file://$PROJECT_DIR$/ConductoresRegistrados20171234.xml" />
+    <entry file="file://$PROJECT_DIR$/ConductoresRegistrados20117294830.xml" />
+    <entry file="file://$PROJECT_DIR$/EstudiantesRegistrados/20117294830.xml" />
+    <entry file="file://$PROJECT_DIR$/src/databases/StudentDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/IngresoServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/AmigosServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConductoresRegistrados/20117294830.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/student/CalificacionConductorServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/student/IngresoEstudianteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/CalificacionEstudianteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/AnadirAmigoServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/student/RegistroEstudianteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="172" column="55" selection-start-line="172" selection-start-column="21" selection-end-line="172" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager/Conversion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="22" column="71" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/PosConductorServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/PromedioServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/driver/RegistroServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/databases/UserDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="372" column="31" lean-forward="true" selection-start-line="372" selection-start-column="31" selection-end-line="372" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/student/PromedioEstudianteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ConductoresRegistrados/20171234.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EstudiantesRegistrados/20164321.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Posicion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Conductor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="21" column="92" selection-start-line="21" selection-start-column="70" selection-end-line="21" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+            <element signature="e#1605#1606#0" expanded="true" />
+            <element signature="e#1665#1666#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1959#1960#0" expanded="true" />
+            <element signature="e#1990#1991#0" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#2078#2079#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1483#1484#0" expanded="true" />
+            <element signature="e#1516#1517#0" expanded="true" />
+            <element signature="e#1549#1550#0" expanded="true" />
+            <element signature="e#1578#1579#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entities/Estudiante.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="769">
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+          <folding>
+            <element signature="e#1459#1460#0" expanded="true" />
+            <element signature="e#1498#1499#0" expanded="true" />
+            <element signature="e#1559#1560#0" expanded="true" />
+            <element signature="e#1615#1616#0" expanded="true" />
+            <element signature="e#1656#1657#0" expanded="true" />
+            <element signature="e#1696#1697#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
+            <element signature="e#1770#1771#0" expanded="true" />
+            <element signature="e#1830#1831#0" expanded="true" />
+            <element signature="e#1880#1881#0" expanded="true" />
+            <element signature="e#2190#2191#0" expanded="true" />
+            <element signature="e#2221#2222#0" expanded="true" />
+            <element signature="e#2269#2270#0" expanded="true" />
+            <element signature="e#2309#2310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>tempcarpooling:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web|tempcarpooling</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Mojarra-1.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
