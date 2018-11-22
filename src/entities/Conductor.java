@@ -1,5 +1,7 @@
 package entities;
 
+import com.google.gson.Gson;
+
 import java.util.LinkedList;
 
 /**
@@ -9,38 +11,69 @@ import java.util.LinkedList;
  */
 public class Conductor {
 
-        private String nombre;
-        private String contrasena;
-        private String carnet;
-        private LinkedList<Estudiante> amigos;
-        private int numCalificaciones;
-        private double promedio;
+    private String nombre;
+    private String contrasena;
+    private String carnet;
+    private LinkedList<Estudiante> amigos;
+    private int numCalificaciones;
+    private Posicion posicionHogar;
+    private double promedio;
 
-        public Conductor(String nombre, String contrasena, String carnet) {
-            this.nombre = nombre;
-            this.contrasena = contrasena;
-            this.carnet = carnet;
-            this.numCalificaciones = 0;
-            this.amigos = new LinkedList<Estudiante>();
-        }
+    public Conductor(String nombre, String contrasena, String carnet, Posicion posicionHogar) {
+        this.nombre = nombre;
+        this.contrasena = contrasena;
+        this.carnet = carnet;
+        this.posicionHogar = posicionHogar;
+        this.numCalificaciones = 0;
+        this.amigos = new LinkedList<Estudiante>();
+    }
 
-        public Conductor(String name, String contrasena, int numCalificaciones, String carnet, LinkedList<Estudiante> amigos, double promedio) {
-            this.nombre = name;
-            this.numCalificaciones = numCalificaciones;
-            this.contrasena = contrasena;
-            this.carnet = carnet;
-            this.amigos = amigos;
-            this.promedio = promedio;
-        }
+    public Conductor(String name, String contrasena, int numCalificaciones, String carnet,
+                     LinkedList<Estudiante> amigos, Posicion posicionHogar, double promedio) {
+        this.nombre = name;
+        this.numCalificaciones = numCalificaciones;
+        this.contrasena = contrasena;
+        this.carnet = carnet;
+        this.amigos = amigos;
+        this.posicionHogar = posicionHogar;
+        this.promedio = promedio;
+    }
 
-        public String getNombre() { return nombre; }
 
-        public String getContrasena() { return contrasena; }
+    public int getNumCalificaciones() {
+        return numCalificaciones;
+    }
 
-        public LinkedList<Estudiante> getAmigos() { return amigos; }
+    public void setNumCalificaciones(int numCalificaciones) {
+        this.numCalificaciones = numCalificaciones;
+    }
 
-        public void setPromedio(double promedio) { this.promedio = promedio; }
+    public Posicion getPosicionHogar() {
+        return posicionHogar;
+    }
 
-        public double getPromedio() { return promedio; }
+    public void setPosicionHogar(Posicion posicionHogar) {
+        this.posicionHogar = posicionHogar;
+    }
+
+    public double getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public String getCarnet() {
+        return carnet;
+    }
 
 }

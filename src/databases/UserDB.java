@@ -17,8 +17,8 @@ public class UserDB {
 
     private JsonParser jsonParser = new JsonParser();
 
-    private final String pathConductores = "C:\\Users\\Kugelblitz\\Documents\\TEC\\Datos 1\\S2\\CarpoolingServer\\ConductoresRegistrados\\";
-    private final String pathEstudiantes = "C:\\Users\\Kugelblitz\\Documents\\TEC\\Datos 1\\S2\\CarpoolingServer\\EstudiantesRegistrados\\";
+    private final String pathConductores = "/home/david/Documents/CarpoolingServer/ConductoresRegistrados/";
+    private final String pathEstudiantes = "/home/david/Documents/CarpoolingServer/EstudiantesRegistrados/";
 
     /**
      * Registra conductor guardando su información en disco por medio de xml.
@@ -36,7 +36,7 @@ public class UserDB {
         JsonParser jsonParser = new JsonParser();
         JsonObject jsonObject = jsonParser.parse(json).getAsJsonObject();
 
-        if (this.ConductorExiste(json)) {
+        if (!this.ConductorExiste(json)) {
 
             String nombre = jsonObject.getAsJsonPrimitive("nombre").getAsString();
             Element nombreElment = new Element("nombre");
@@ -89,7 +89,7 @@ public class UserDB {
         JsonParser jsonParser = new JsonParser();
         JsonObject jsonObject = jsonParser.parse(json).getAsJsonObject();
 
-        if (this.EstudianteExiste(json)) {
+        if (!this.EstudianteExiste(json)) {
 
             String nombre = jsonObject.getAsJsonPrimitive("nombre").getAsString();
             Element nombreElment = new Element("nombre");
@@ -332,11 +332,47 @@ public class UserDB {
 
     }
 
+    public double getPromedioConductor(String json) throws JDOMException, IOException {
+        double promedio = 0;
+
+        if (this.ConductorExiste(json)) {
+            JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
+            Document doc = Conversion.getXMLFromDisk(this.pathConductores+
+                    jsonObject.getAsJsonPrimitive("carnet").getAsString()+".xml");
+
+            String promedioString = doc.getRootElement().getChildText("promedio");
+            double promedioDouble = Double.valueOf(promedioString);
+
+            promedio = promedioDouble;
+        }
+
+        return promedio;
+    }
+
+
+    public double getPromedioEstudiante(String json) throws JDOMException, IOException {
+        double promedio = 0;
+
+        if (this.EstudianteExiste(json)) {
+            JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
+            Document doc = Conversion.getXMLFromDisk(this.pathEstudiantes+
+                    jsonObject.getAsJsonPrimitive("carnet").getAsString()+".xml");
+
+            String promedioString = doc.getRootElement().getChildText("promedio");
+            double promedioDouble = Double.valueOf(promedioString);
+
+            promedio = promedioDouble;
+        }
+
+        return promedio;
+    }
+
     public static void main(String[] args) throws IOException, JDOMException {
 
         UserDB userDB = new UserDB();
         Gson gson = new Gson();
 
+        /*
         Estudiante estudiante = new Estudiante("carlos", "1234", "20164321");
         userDB.RegistrarEstudiante(gson.toJson(estudiante));
         Conductor conductor = new Conductor("panchita", "something","20117294830");
@@ -347,6 +383,7 @@ public class UserDB {
         userDB.calificarEstudiante("{\"carnet\": 20164321, \"calificacion\": 5}");
         userDB.calificarConductor("{\"carnet\": 20117294830, \"calificacion\": 5}");
         userDB.calificarConductor("{\"carnet\": 20117294830, \"calificacion\": 2}");
+        */
 
     }
 

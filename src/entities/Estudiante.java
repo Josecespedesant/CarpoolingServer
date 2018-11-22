@@ -15,18 +15,21 @@ public class Estudiante {
     private LinkedList<Conductor> amigos;
     private int viajesRealizados;
     private int numCalificaciones;
+    private Posicion posicionHogar;
     private double promedio;
 
-    public Estudiante(String nombre, String contrasena, String carnet) {
+    public Estudiante(String nombre, String contrasena, String carnet, Posicion posicionHogar) {
         this.nombre = nombre;
         this.carnet =carnet;
         this.viajesRealizados = 0;
         this.numCalificaciones = 0;
         this.amigos = new LinkedList<Conductor>();
         this.contrasena = contrasena;
+        this.posicionHogar = posicionHogar;
     }
 
-    public Estudiante(String nombre, String contrasena, String carnet, int numCalificaciones, int viajesRealizados, LinkedList<Conductor> amigos, double promedio) {
+    public Estudiante(String nombre, String contrasena, String carnet, int numCalificaciones, int viajesRealizados,
+                      LinkedList<Conductor> amigos, double promedio, Posicion posicionHogar) {
         this.nombre = nombre;
         this.carnet = carnet;
         this.numCalificaciones = numCalificaciones;
@@ -34,17 +37,55 @@ public class Estudiante {
         this.contrasena = contrasena;
         this.amigos = amigos;
         this.promedio = promedio;
+        this.posicionHogar = posicionHogar;
     }
 
-    public String getNombre() { return nombre; }
+    public int getViajesRealizados() {
+        return viajesRealizados;
+    }
 
-    public String getContrasena() { return contrasena; }
+    public void setViajesRealizados(int viajesRealizados) {
+        this.viajesRealizados = viajesRealizados;
+    }
 
-    public LinkedList<Conductor> getAmigos() { return amigos; }
+    public int getNumCalificaciones() {
+        return numCalificaciones;
+    }
 
-    public void setPromedio(double promedio) { this.promedio = promedio; }
+    public void setNumCalificaciones(int numCalificaciones) {
+        this.numCalificaciones = numCalificaciones;
+    }
 
-    public double getPromedio() { return promedio; }
+    public Posicion getPosicionHogar() {
+        return posicionHogar;
+    }
 
+    public void setPosicionHogar(Posicion posicionHogar) {
+        this.posicionHogar = posicionHogar;
+    }
+
+    public double getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public String getCarnet() {
+        return carnet;
+    }
+
+    public LinkedList<Conductor> getAmigos() {
+        return amigos;
+    }
 }
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conductor>
+  <nombre>david</nombre>
+  <contrasena>algo</contrasena>
+  <carnet>20171234</carnet>
+  <amigos />
+  <promedio>3.7777777777777777</promedio>
+  <numCalificaciones>9</numCalificaciones>
+</conductor>
