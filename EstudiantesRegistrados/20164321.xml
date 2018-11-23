@@ -5,11 +5,13 @@
   <carnet>20164321</carnet>
   <amigos>
     <amigo>1776</amigo>
+    <amigo>20171234</amigo>
   </amigos>
+  <viajesRealizados>0</viajesRealizados>
   <promedio>0</promedio>
   <numCalificaciones>0</numCalificaciones>
   <posicionHogar>
-    <lon>0.0</lon>
-    <lat>0.0</lat>
+    <lon>3.0</lon>
+    <lat>3.0</lat>
   </posicionHogar>
 </estudiante>

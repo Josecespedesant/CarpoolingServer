@@ -47,17 +47,8 @@ public class ViajeSinDesviosServlet extends HttpServlet {
 
         int maxEstudiantesRecogidos = jsonObject.getAsJsonPrimitive("maxEstudiantesRecogidos").getAsInt();
 
-        String estudiantesInteresados = jsonObject.getAsJsonArray("estudiantesInteresados").getAsString();
-
-        // TODO convertir estudiantes interesados en array de estudiantes.
-        System.out.println(estudiantesInteresados);
-
         Viajes.getViajes().add(new Viaje("tempID", maxEstudiantesRecogidos, conductor, posicion,
                 new LinkedList<Vertex>(), new LinkedList<Estudiante>(), new LinkedList<Estudiante>()));
-
-
-
-
     }
 
 }

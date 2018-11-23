@@ -7,10 +7,7 @@ import entities.Conductor;
 import entities.Estudiante;
 import entities.Posicion;
 import manager.Conversion;
-import org.jdom2.Content;
-import org.jdom2.Document;
-import org.jdom2.Element;
-import org.jdom2.JDOMException;
+import org.jdom2.*;
 import org.jdom2.input.SAXBuilder;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -22,13 +19,14 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class UserDB {
 
     private JsonParser jsonParser = new JsonParser();
 
-    private final String pathConductores = "/home/david/Documents/CarpoolingServer/ConductoresRegistrados/";
-    private final String pathEstudiantes = "/home/david/Documents/CarpoolingServer/EstudiantesRegistrados/";
+    private final String pathConductores = "C:\\Users\\Kugelblitz\\Documents\\TEC\\Datos 1\\S2\\CarpoolingServer\\ConductoresRegistrados\\";
+    private final String pathEstudiantes = "C:\\Users\\Kugelblitz\\Documents\\TEC\\Datos 1\\S2\\CarpoolingServer\\EstudiantesRegistrados\\";
 
     /**
      * Registra conductor guardando su información en disco por medio de xml.
@@ -148,6 +146,7 @@ public class UserDB {
             estudiante.addContent(contrasenaElement);
             estudiante.addContent(carnetElement);
             estudiante.addContent(amigosElement);
+            estudiante.addContent(viajesRealizadosElement);
             estudiante.addContent(promedioElement);
             estudiante.addContent(numCalificaciones);
             estudiante.addContent(posicionHogarElement);
@@ -295,7 +294,7 @@ public class UserDB {
             Document docConductor = Conversion.getXMLFromDisk(this.pathConductores +conductorPath);
             Element amigoElementConductor = new Element("amigo");
             amigoElementConductor.addContent(jsonObject.getAsJsonPrimitive("carnetAmigo").getAsString());
-            docConductor.getRootElement().getChild("amigos").setContent(amigoElementConductor);
+            docConductor.getRootElement().getChild("amigos").addContent(amigoElementConductor);
 
             Conversion.saveXMLToDisk(docConductor, this.pathConductores + conductorPath);
 
@@ -303,15 +302,13 @@ public class UserDB {
             Document docEstudiante = Conversion.getXMLFromDisk(this.pathEstudiantes + estudiantePath);
             Element amigoElementEstudiante = new Element("amigo");
             amigoElementEstudiante.addContent(jsonObject.getAsJsonPrimitive("miCarnet").getAsString());
-            docEstudiante.getRootElement().getChild("amigos").setContent(amigoElementEstudiante);
+            docEstudiante.getRootElement().getChild("amigos").addContent(amigoElementEstudiante);
 
             Conversion.saveXMLToDisk(docEstudiante, this.pathEstudiantes + estudiantePath);
 
             anadido = true;
         }
-
         return anadido;
-
     }
 
     public void calificarConductor(String json) throws JDOMException, IOException {
@@ -418,18 +415,13 @@ public class UserDB {
             double lon = Double.valueOf(doc.getRootElement().getChild("posicionHogar").getChildText("lon"));
             Posicion posicion = new Posicion(lat, lon);
 
-            LinkedList<Conductor> amigos = new LinkedList<>();
+            LinkedList<String> amigos = new LinkedList<>();
 
             Gson gson = new Gson();
 
-            NodeList amigos = doc.getRootElement().getChildNodes
-
-            for (Iterator iterator = doc.getRootElement().getChild("amigos").getContent().iterator(); iterator.hasNext();) {
-                Content content = (Content) iterator.next();
-                String amigoJson = "{\"carnet\":"+content+"}";
-                amigoJson = enviarStudent(amigoJson);
-                amigoJson = gson.toJson(amigoJson);
-                amigos.add(gson.fromJson(amigoJson, Conductor.class));
+            List<Element> elements = doc.getRootElement().getChild("amigos").getChildren();
+            for (Element element: elements) {
+                amigos.add(element.getText());
             }
 
             Estudiante estudiante = new Estudiante(nombre, contrasena, carnet, numCalificaciones, viajesRealizados,
@@ -439,11 +431,40 @@ public class UserDB {
         return student;
     }
 
-    public String enviarDriver(String json) {
-        return "";
+    public String enviarDriver(String json) throws JDOMException, IOException {
+        String driver = "";
+        if (this.ConductorExiste(json)) {
+            JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
+            Document doc = Conversion.getXMLFromDisk(
+                    this.pathConductores+jsonObject.getAsJsonPrimitive("carnet")+".xml");
+
+            String nombre = doc.getRootElement().getChildText("nombre");
+            String contrasena = doc.getRootElement().getChildText("contrasena");
+            String carnet = doc.getRootElement().getChildText("carnet");
+            int numCalificaciones = Integer.valueOf(doc.getRootElement().getChildText("numCalificaciones"));
+            double promedio = Double.valueOf(doc.getRootElement().getChildText("promedio"));
+            double lat = Double.valueOf(doc.getRootElement().getChild("posicionHogar").getChildText("lat"));
+            double lon = Double.valueOf(doc.getRootElement().getChild("posicionHogar").getChildText("lon"));
+            Posicion posicion = new Posicion(lat, lon);
+
+            LinkedList<String> amigos = new LinkedList<>();
+
+            Gson gson = new Gson();
+
+            List<Element> elements = doc.getRootElement().getChild("amigos").getChildren();
+            System.out.println(elements.size());
+            for (Element element: elements) {
+                amigos.add(element.getText());
+            }
+
+            Conductor conductor = new Conductor(nombre, contrasena, numCalificaciones, carnet, amigos,
+                    posicion, promedio);
+            driver = gson.toJson(conductor);
+        }
+        return driver;
     }
 
-    public static void main(String[] args) throws IOException, JDOMException {
+    public static void main(String[] args) throws IOException, JDOMException, ParserConfigurationException {
 
         UserDB userDB = new UserDB();
         Gson gson = new Gson();
@@ -453,12 +474,12 @@ public class UserDB {
 
         Estudiante estudiante = new Estudiante("carlos", "1234", "20164321",
                 new Posicion(3, 3));
-        System.out.println(gson.toJson(estudiante));
         userDB.RegistrarEstudiante(gson.toJson(estudiante));
 
         userDB.anadirAmigo("{\"carnetAmigo\": 20164321, \"miCarnet\":1776}");
+        userDB.anadirAmigo("{\"carnetAmigo\": 20164321, \"miCarnet\":20171234}");
 
-        System.out.println(userDB.enviarDriver("{\"carnet\": 1234}"));
+        System.out.println(userDB.enviarStudent("{\"carnet\": 20164321}"));
 
         /*
         Conductor conductor = new Conductor("panchita", "something","20117294830");

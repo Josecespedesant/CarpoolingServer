@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import graph.DijkstraAlgorithm;
+import graph.Edge;
+import graph.Graph;
+import graph.Vertex;
 import org.junit.Test;
 
 public class TestDijkstraAlgorithm {
