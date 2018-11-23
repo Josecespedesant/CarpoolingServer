@@ -17,6 +17,26 @@
         <url-pattern>/top5</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>EnviarEstadoViajeServlet</servlet-name>
+        <servlet-class>servlets.EstadoViajeServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EnviarEstadoViajeServlet</servlet-name>
+        <url-pattern>/estado-viaje</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RecogerEstudianteServlet</servlet-name>
+        <servlet-class>servlets.RecogerEstudianteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RecogerEstudianteServlet</servlet-name>
+        <url-pattern>/recoger-estudiante</url-pattern>
+    </servlet-mapping>
+
     <!--
         Servlets Conductor
     -->

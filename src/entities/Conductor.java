@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 import java.util.LinkedList;
 
 /**
- * Representa conductor
+ * Representa conductor.
  *
  * @author David Azofeifa H.
  */

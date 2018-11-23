@@ -1,7 +1,5 @@
 package entities;
 
-import graph.Vertex;
-
 import java.util.LinkedList;
 
 /**
@@ -15,6 +13,16 @@ public class Viajes {
 
     public static LinkedList<Viaje> getViajes() {
         return viajes;
+    }
+
+    public static Viaje getViajeById(String id) {
+        Viaje tempViaje = null;
+        for (Viaje viaje: viajes) {
+            if (viaje.getId().equals(id)) {
+                tempViaje = viaje;
+            }
+        }
+        return tempViaje;
     }
 
 }

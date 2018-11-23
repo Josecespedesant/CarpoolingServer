@@ -17,6 +17,8 @@ public class Estudiante {
     private int numCalificaciones;
     private Posicion posicionHogar;
     private double promedio;
+    boolean carpoolingNormal;
+    boolean carpoolingAmigos;
 
     public Estudiante(String nombre, String contrasena, String carnet, Posicion posicionHogar) {
         this.nombre = nombre;
@@ -26,6 +28,9 @@ public class Estudiante {
         this.amigos = new LinkedList<String>();
         this.contrasena = contrasena;
         this.posicionHogar = posicionHogar;
+
+        this.carpoolingAmigos = false;
+        this.carpoolingNormal = false;
     }
 
     public Estudiante(String nombre, String contrasena, String carnet, int numCalificaciones, int viajesRealizados,

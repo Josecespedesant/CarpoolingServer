@@ -1,5 +1,8 @@
 package servlets.student;
 
+import databases.UserDB;
+import org.jdom2.JDOMException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,8 +16,18 @@ import java.io.IOException;
  */
 public class CarpoolingAmigo extends HttpServlet {
 
+    UserDB userDB = new UserDB();
+
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String json = request.getParameter("json");
+
+        try {
+            userDB.habilitarCarpoolingAmigos(json);
+        } catch (JDOMException e) {
+            e.printStackTrace();
+        }
     }
 
 }

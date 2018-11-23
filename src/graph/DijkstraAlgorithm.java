@@ -9,6 +9,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Implementación del algorítmo Dijkstra
+ * @author José Antonio
+ *
+ */
 public class DijkstraAlgorithm {
 
     private final List<Vertex> nodes;
@@ -18,12 +23,20 @@ public class DijkstraAlgorithm {
     private Map<Vertex, Vertex> predecessors;
     private Map<Vertex, Integer> distance;
 
+    /**
+     * Constructor de la clase Dijkstra que recibe como parámetro el grafo
+     * @param graph
+     */
     public DijkstraAlgorithm(Graph graph) {
         // create a copy of the array so that we can operate on this array
         this.nodes = new ArrayList<Vertex>(graph.getVertexes());
         this.edges = new ArrayList<Edge>(graph.getEdges());
     }
-
+    
+    /**
+     * Recibe como parámetro el nodo donde se iniciará el recorrido
+     * @param source
+     */
     public void execute(Vertex source) {
         settledNodes = new HashSet<Vertex>();
         unSettledNodes = new HashSet<Vertex>();
@@ -39,6 +52,10 @@ public class DijkstraAlgorithm {
         }
     }
 
+    /**
+     * Encuentra la mínima distancia
+     * @param node
+     */
     private void findMinimalDistances(Vertex node) {
         List<Vertex> adjacentNodes = getNeighbors(node);
         for (Vertex target : adjacentNodes) {
@@ -53,6 +70,12 @@ public class DijkstraAlgorithm {
 
     }
 
+    /**
+     * Obtiene la distancia de un nodo a otro
+     * @param node
+     * @param target
+     * @return
+     */
     private int getDistance(Vertex node, Vertex target) {
         for (Edge edge : edges) {
             if (edge.getSource().equals(node)
@@ -63,6 +86,11 @@ public class DijkstraAlgorithm {
         throw new RuntimeException("Should not happen");
     }
 
+    /**
+     * Obtiene la lista de adyacencia de un vértice en específico
+     * @param node
+     * @return
+     */
     private List<Vertex> getNeighbors(Vertex node) {
         List<Vertex> neighbors = new ArrayList<Vertex>();
         for (Edge edge : edges) {
@@ -92,6 +120,11 @@ public class DijkstraAlgorithm {
         return settledNodes.contains(vertex);
     }
 
+    /**
+     * Obtiene la distancia mínima al vertice
+     * @param destination
+     * @return
+     */
     private int getShortestDistance(Vertex destination) {
         Integer d = distance.get(destination);
         if (d == null) {
@@ -101,9 +134,10 @@ public class DijkstraAlgorithm {
         }
     }
 
-    /*
-     * This method returns the path from the source to the selected target and
-     * NULL if no path exists
+    /**
+     * Retorna el camino desde el vértice de origen hasta el que se pase como parámetro
+     * @param target
+     * @return null si no hay camino, la lista si lo hay
      */
     public LinkedList<Vertex> getPath(Vertex target) {
         LinkedList<Vertex> path = new LinkedList<Vertex>();

@@ -14,7 +14,7 @@ import java.util.LinkedList;
 
 /**
  * Se encarga de recibir un pedido de viaje con amigos.
- * Envia mejor ruta calculada.
+ * Envia instancia de viaje.
  *
  * @author David Azofeifa H.
  */
@@ -48,7 +48,7 @@ public class ViajeAmigosServlet extends HttpServlet {
         }
 
              Viajes.getViajes().add(new Viaje("tempID", maxEstudiantesRecogidos, conductor, posicion,
-                new LinkedList<Vertex>(), new LinkedList<Estudiante>(), new LinkedList<Estudiante>()));
+                     new LinkedList<Estudiante>(), new LinkedList<Estudiante>()));
     }
 
     public static void main(String[] args) {

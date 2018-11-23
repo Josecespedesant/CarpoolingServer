@@ -15,6 +15,13 @@ public class Edge  {
     private final Vertex destination;
     private final int weight;
 
+    /**
+     * Constructor de la clase arista
+     * @param id
+     * @param source
+     * @param destination
+     * @param weight
+     */
     public Edge(String id, Vertex source, Vertex destination, int weight) {
         this.id = id;
         this.source = source;

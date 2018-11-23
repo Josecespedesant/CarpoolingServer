@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Recibe calificacion a un conductor
+ * Recibe calificacion a un conductor y la registra.
  *
  * @author David Azofeifa H.
  */

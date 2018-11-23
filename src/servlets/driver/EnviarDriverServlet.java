@@ -11,6 +11,11 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Envia informacion sobre instancia particular de Conductor.
+ *
+ * @author David Azofeifa H.
+ */
 public class EnviarDriverServlet extends HttpServlet {
 
     UserDB userDB = new UserDB();

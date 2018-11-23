@@ -25,8 +25,8 @@ public class UserDB {
 
     private JsonParser jsonParser = new JsonParser();
 
-    private final String pathConductores = "C:\\Users\\Kugelblitz\\Documents\\TEC\\Datos 1\\S2\\CarpoolingServer\\ConductoresRegistrados\\";
-    private final String pathEstudiantes = "C:\\Users\\Kugelblitz\\Documents\\TEC\\Datos 1\\S2\\CarpoolingServer\\EstudiantesRegistrados\\";
+    private final String pathConductores = "/home/david/Documents/CarpoolingServer/ConductoresRegistrados/";
+    private final String pathEstudiantes = "/home/david/Documents/CarpoolingServer/EstudiantesRegistrados/";
 
     /**
      * Registra conductor guardando su información en disco por medio de xml.
@@ -363,39 +363,30 @@ public class UserDB {
 
     }
 
-    public double getPromedioConductor(String json) throws JDOMException, IOException {
-        double promedio = 0;
-
-        if (this.ConductorExiste(json)) {
-            JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
-            Document doc = Conversion.getXMLFromDisk(this.pathConductores+
-                    jsonObject.getAsJsonPrimitive("carnet").getAsString()+".xml");
-
-            String promedioString = doc.getRootElement().getChildText("promedio");
-            double promedioDouble = Double.valueOf(promedioString);
-
-            promedio = promedioDouble;
-        }
-
-        return promedio;
-    }
-
-
-    public double getPromedioEstudiante(String json) throws JDOMException, IOException {
-        double promedio = 0;
-
+    public void habilitarCarpoolingNormal(String json) throws JDOMException, IOException {
         if (this.EstudianteExiste(json)) {
             JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
-            Document doc = Conversion.getXMLFromDisk(this.pathEstudiantes+
-                    jsonObject.getAsJsonPrimitive("carnet").getAsString()+".xml");
+            Document doc = Conversion.getXMLFromDisk(
+                    this.pathEstudiantes + jsonObject.getAsJsonPrimitive("carnet") + ".xml");
 
-            String promedioString = doc.getRootElement().getChildText("promedio");
-            double promedioDouble = Double.valueOf(promedioString);
+            doc.getRootElement().getChild("carpoolingNormal").setText("true");
 
-            promedio = promedioDouble;
+            Conversion.saveXMLToDisk(doc,
+                    this.pathEstudiantes+jsonObject.getAsJsonPrimitive("carnet")+".xml");
         }
+    }
 
-        return promedio;
+    public void habilitarCarpoolingAmigos(String json) throws JDOMException, IOException {
+        if (this.EstudianteExiste(json)) {
+            JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
+            Document doc = Conversion.getXMLFromDisk(
+                    this.pathEstudiantes + jsonObject.getAsJsonPrimitive("carnet") + ".xml");
+
+            doc.getRootElement().getChild("carpoolingAmigos").setText("true");
+
+            Conversion.saveXMLToDisk(doc,
+                    this.pathEstudiantes+jsonObject.getAsJsonPrimitive("carnet")+".xml");
+        }
     }
 
     public String enviarStudent(String json) throws JDOMException, IOException, ParserConfigurationException {

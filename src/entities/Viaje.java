@@ -1,20 +1,27 @@
 package entities;
 
-import graph.Vertex;
+import com.google.gson.Gson;
+import graph.Edge;
+import graph.Graph;
 
 import java.util.LinkedList;
 
+/**
+ * Representa el viaje que realizan conductores con junto estudiantes.
+ *
+ * @author David Azofeifa H.
+ */
 public class Viaje {
 
     private String id;
     private Posicion posConductor;
-    private LinkedList<Vertex> nodosRuta;
+    private Graph graph;
     private Conductor conductor;
     private int maxEstudiantesRecogidos;
     private LinkedList<Estudiante> estudiantesInteresados;
     private LinkedList<Estudiante> estudiantesRecogidos;
 
-    public Viaje(String id, int maxEstudiantesRecogidos, Conductor conductor, Posicion posConductor, LinkedList<Vertex> nodosRuta,
+    public Viaje(String id, int maxEstudiantesRecogidos, Conductor conductor, Posicion posConductor,
                  LinkedList<Estudiante> estudiantesInteresados, LinkedList<Estudiante> estudiantesRecogidos) {
         this.id = id;
         this.conductor = conductor;
@@ -22,15 +29,22 @@ public class Viaje {
         this.maxEstudiantesRecogidos = maxEstudiantesRecogidos;
         this.estudiantesInteresados = estudiantesInteresados;
         this.estudiantesRecogidos = estudiantesRecogidos;
-        this.nodosRuta = nodosRuta;
+
+        this.graph = new Graph(new LinkedList<>(), new LinkedList<Edge>());
+        this.graph.generateThirtyRandomPlaces();
     }
 
-    public void calcularNodosRuta() {
-        // TODO llamar a grafo para que calcule puntos de interes cercanos y defina ruta
-    }
-
-    public void recogerEstudiante() {
-        // TODO hacer que estudiante pase de interesados a recogidos.
+    /**
+     * Incluye a estudiante dentro del auto junto con conductor, llena un asiento disponible.
+     *
+     * @param estudiante
+     */
+    public void recogerEstudiante(Estudiante estudiante) {
+        if (this.estudiantesRecogidos.size() <= this.maxEstudiantesRecogidos) {
+            estudiante.setViajesRealizados(estudiante.getViajesRealizados()+1);
+            this.estudiantesRecogidos.add(estudiante);
+            this.estudiantesInteresados.remove(estudiante);
+        }
     }
 
     public Conductor getConductor() {
@@ -57,11 +71,16 @@ public class Viaje {
         this.posConductor = posConductor;
     }
 
-    public LinkedList<Vertex> getNodosRuta() {
-        return nodosRuta;
+    public Graph getGraph() {
+        return graph;
     }
 
-    public void setNodosRuta(LinkedList<Vertex> nodosRuta) {
-        this.nodosRuta = nodosRuta;
+    public static void main(String[] args) {
+        Conductor conductor = new Conductor("david", "algo", "1224", new Posicion(0,0));
+        Viaje viaje = new Viaje("1", 4, conductor, conductor.getPosicionHogar(),
+                new LinkedList<Estudiante>(), new LinkedList<Estudiante>());
+        Gson gson = new Gson();
+        String json = gson.toJson(viaje);
+        System.out.println(json);
     }
 }

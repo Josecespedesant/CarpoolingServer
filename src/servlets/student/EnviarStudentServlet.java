@@ -11,6 +11,11 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/**
+ * Envia informacion sobre una instancia particular de Estudiante.
+ *
+ * @author David Azofeifa H.
+ */
 public class EnviarStudentServlet extends HttpServlet {
 
     UserDB userDB = new UserDB();
