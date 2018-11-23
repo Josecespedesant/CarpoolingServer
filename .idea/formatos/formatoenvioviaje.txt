@@ -1,0 +1,1 @@
+{"conductor": {"nombre":"david","contrasena":"algo","carnet":"32","amigos":[],"numCalificaciones":0,"posicionHogar":{"lat":0.0,"lon":0.0},"promedio":0.0}, "maxEstudiantesRecogidos":3, "posConductor": "posicionHogar":{"lat":0.0,"lon":0.0}}

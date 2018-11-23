@@ -12,7 +12,6 @@ public class Viaje {
     private Conductor conductor;
     private int maxEstudiantesRecogidos;
     private LinkedList<Estudiante> estudiantesInteresados;
-
     private LinkedList<Estudiante> estudiantesRecogidos;
 
     public Viaje(String id, int maxEstudiantesRecogidos, Conductor conductor, Posicion posConductor, LinkedList<Vertex> nodosRuta,

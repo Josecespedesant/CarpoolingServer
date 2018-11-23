@@ -24,7 +24,12 @@ public class EnviarDriverServlet extends HttpServlet {
         PrintWriter out=response.getWriter();
 
         if (userDB.ConductorExiste(json)) {
-            String estudiante = userDB.enviarDriver(json);
+            String estudiante = null;
+            try {
+                estudiante = userDB.enviarDriver(json);
+            } catch (JDOMException e) {
+                e.printStackTrace();
+            }
             out.print(estudiante);
         }
     }

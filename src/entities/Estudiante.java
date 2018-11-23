@@ -12,7 +12,7 @@ public class Estudiante {
     private String nombre;
     private String contrasena;
     private String carnet;
-    private LinkedList<Conductor> amigos;
+    private LinkedList<String> amigos;
     private int viajesRealizados;
     private int numCalificaciones;
     private Posicion posicionHogar;
@@ -23,13 +23,13 @@ public class Estudiante {
         this.carnet =carnet;
         this.viajesRealizados = 0;
         this.numCalificaciones = 0;
-        this.amigos = new LinkedList<Conductor>();
+        this.amigos = new LinkedList<String>();
         this.contrasena = contrasena;
         this.posicionHogar = posicionHogar;
     }
 
     public Estudiante(String nombre, String contrasena, String carnet, int numCalificaciones, int viajesRealizados,
-                      LinkedList<Conductor> amigos, double promedio, Posicion posicionHogar) {
+                      LinkedList<String> amigos, double promedio, Posicion posicionHogar) {
         this.nombre = nombre;
         this.carnet = carnet;
         this.numCalificaciones = numCalificaciones;
@@ -84,7 +84,7 @@ public class Estudiante {
         return carnet;
     }
 
-    public LinkedList<Conductor> getAmigos() {
+    public LinkedList<String> getAmigos() {
         return amigos;
     }
 }

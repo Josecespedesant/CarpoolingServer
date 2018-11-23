@@ -1,0 +1,97 @@
+Servidor a DriverApp:
+
+-- > Registrar:
+
+Recibe
+{
+"nombre" : String,
+"contrasena": String,
+"carnet": int,
+"hogar": String,
+}
+
+Envia
+{
+POR DETERMINAR
+}
+
+Ingresar:
+{
+"carnet": int,
+"contrasena"
+}
+
+--> Registro amigo
+
+Recibe
+{
+"miCarnet": int,
+"carnetAmigo": int
+}
+
+Envia
+{
+"exitoso": boolean
+}
+
+--> Asientos disponibles
+
+Recibe
+{
+"numAsientos": int
+}
+
+--> Pos conductor
+
+Recibe
+{
+POR DETERMINAR
+}
+
+--> Tipo viaje
+
+Recibe
+{
+"tipoViaje": String
+}
+
+Envia
+
+Si es sin desvios
+{
+POR DETERMINAR
+}
+
+si es con amigos
+
+Recibe
+{
+"amigos": [carnet, carnet, ..., carnet]
+}
+
+Envia
+{
+POR DETERMINAR
+}
+
+--> Calificacion estudiante
+
+Recibe
+{
+"carnet": int,
+"calificacion": double
+}
+
+Envia
+{
+"exitoso": boolean
+}
+
+--> Promedio
+
+Envio
+{
+"promedio": double
+}
+
+
