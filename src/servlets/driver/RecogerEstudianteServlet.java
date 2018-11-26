@@ -1,4 +1,4 @@
-package servlets;
+package servlets.driver;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -30,8 +30,10 @@ public class RecogerEstudianteServlet extends HttpServlet {
 
         Estudiante estudiante = null;
         try {
-            String temp = userDB.enviarStudent(json);
-            estudiante = gson.fromJson(temp, Estudiante.class);
+            JsonObject jsonObject = jsonParser.parse(json).getAsJsonObject();
+            String temp = jsonObject.getAsJsonObject("estudiante").getAsString();
+            String estudiante1 = userDB.enviarStudent(temp);
+            estudiante = gson.fromJson(estudiante1, Estudiante.class);
         } catch (JDOMException e) {
             e.printStackTrace();
         } catch (ParserConfigurationException e) {
@@ -39,5 +41,7 @@ public class RecogerEstudianteServlet extends HttpServlet {
         }
 
         Viajes.getViajeById("id").recogerEstudiante(estudiante);
+        System.out.println(gson.toJson(Viajes.getViajeById("id")));
     }
+
 }

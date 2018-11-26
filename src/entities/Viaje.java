@@ -1,6 +1,7 @@
 package entities;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.Expose;
 import graph.Edge;
 import graph.Graph;
 
@@ -18,7 +19,9 @@ public class Viaje {
     private Graph graph;
     private Conductor conductor;
     private int maxEstudiantesRecogidos;
+    @Expose(serialize = false)
     private LinkedList<Estudiante> estudiantesInteresados;
+    @Expose(serialize = false)
     private LinkedList<Estudiante> estudiantesRecogidos;
 
     public Viaje(String id, int maxEstudiantesRecogidos, Conductor conductor, Posicion posConductor,

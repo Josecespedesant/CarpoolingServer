@@ -38,7 +38,7 @@ public class RegistroServlet extends HttpServlet {
         }
         else {
             System.out.println("hola");
-            out.print("{\"exitoso\": \"yaExiste\"}");
+            out.print("{\"exitoso\": \"false\"}");
         }
     }
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conductor>
+  <nombre>Kal</nombre>
+  <contrasena>q</contrasena>
+  <carnet>9781234567897</carnet>
+  <amigos />
+  <promedio>0</promedio>
+  <numCalificaciones>0</numCalificaciones>
+  <posicionHogar>
+    <lon>0.0</lon>
+    <lat>0.0</lat>
+  </posicionHogar>
+</conductor>

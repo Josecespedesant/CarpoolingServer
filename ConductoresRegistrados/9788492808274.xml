@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <conductor>
-  <nombre>David</nombre>
-  <contrasena>first</contrasena>
-  <carnet>2017100036</carnet>
+  <nombre>alex</nombre>
+  <contrasena>lol</contrasena>
+  <carnet>9788492808274</carnet>
   <amigos />
   <promedio>0</promedio>
   <numCalificaciones>0</numCalificaciones>
   <posicionHogar>
-    <lon>-83.91573641449213</lon>
-    <lat>9.859785159552105</lat>
+    <lon>0.0</lon>
+    <lat>0.0</lat>
   </posicionHogar>
 </conductor>

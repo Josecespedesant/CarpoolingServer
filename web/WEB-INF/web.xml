@@ -27,9 +27,13 @@
         <url-pattern>/estado-viaje</url-pattern>
     </servlet-mapping>
 
+    <!--
+    Servlets Conductor
+    -->
+
     <servlet>
         <servlet-name>RecogerEstudianteServlet</servlet-name>
-        <servlet-class>servlets.RecogerEstudianteServlet</servlet-class>
+        <servlet-class>servlets.driver.RecogerEstudianteServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -37,9 +41,6 @@
         <url-pattern>/recoger-estudiante</url-pattern>
     </servlet-mapping>
 
-    <!--
-        Servlets Conductor
-    -->
 
     <servlet>
         <servlet-name>AnadirAmigoServlet</servlet-name>
@@ -119,6 +120,16 @@
     <servlet-mapping>
         <servlet-name>ViajeSinDesviosServlet</servlet-name>
         <url-pattern>/viaje-sin-desvios-condcutor</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>EnviarDriverServlet</servlet-name>
+        <servlet-class>servlets.driver.EnviarDriverServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>EnviarDriverServlet</servlet-name>
+        <url-pattern>/enviar-conductor</url-pattern>
     </servlet-mapping>
 
     <!--

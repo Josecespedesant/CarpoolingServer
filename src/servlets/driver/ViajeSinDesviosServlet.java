@@ -58,4 +58,8 @@ public class ViajeSinDesviosServlet extends HttpServlet {
         out.print(viajeJson);
     }
 
+    public static void main(String[] args) {
+
+    }
+
 }

@@ -38,9 +38,10 @@ public class EstadoViajeServlet extends HttpServlet {
         String id = jsonObject.getAsJsonPrimitive("id").getAsString();
         Viaje viaje = Viajes.getViajeById(id);
         String viajeJson = gson.toJson(viaje);
+        JsonObject jsonObject1 = jsonParser.parse(viajeJson).getAsJsonObject();
 
         // Se envia viaje
-        out.print(viajeJson);
+        out.print(jsonObject1);
     }
 
 }

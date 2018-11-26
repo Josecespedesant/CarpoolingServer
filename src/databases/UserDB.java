@@ -311,6 +311,13 @@ public class UserDB {
         return anadido;
     }
 
+    /**
+     * Ingresa calificacion de conductor, cambia su promedio y numero de calificaiones.
+     *
+     * @param json
+     * @throws JDOMException
+     * @throws IOException
+     */
     public void calificarConductor(String json) throws JDOMException, IOException {
         JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
 
@@ -336,6 +343,13 @@ public class UserDB {
         Conversion.saveXMLToDisk(doc, this.pathConductores+carnet+".xml");
     }
 
+    /**
+     * Ingresa calificacion de un estudiante, cambia su ponderado y numero de calificaciones.
+     *
+     * @param json
+     * @throws JDOMException
+     * @throws IOException
+     */
     public void calificarEstudiante(String json) throws JDOMException, IOException {
 
         JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
@@ -363,6 +377,13 @@ public class UserDB {
 
     }
 
+    /**
+     * Ingresa en el sistema la disponibilidad de un estudiante para que lo recoja cualquier conductor
+     *
+     * @param json
+     * @throws JDOMException
+     * @throws IOException
+     */
     public void habilitarCarpoolingNormal(String json) throws JDOMException, IOException {
         if (this.EstudianteExiste(json)) {
             JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
@@ -376,6 +397,13 @@ public class UserDB {
         }
     }
 
+    /**
+     * Ingresa en el sistema un mensaje a un conductor especifica para que recoje al etudiante
+     *
+     * @param json
+     * @throws JDOMException
+     * @throws IOException
+     */
     public void habilitarCarpoolingAmigos(String json) throws JDOMException, IOException {
         if (this.EstudianteExiste(json)) {
             JsonObject jsonObject = this.jsonParser.parse(json).getAsJsonObject();
@@ -389,6 +417,15 @@ public class UserDB {
         }
     }
 
+    /**
+     * Envia toda la informacion en disco de un estudiante particular.
+     *
+     * @param json
+     * @return
+     * @throws JDOMException
+     * @throws IOException
+     * @throws ParserConfigurationException
+     */
     public String enviarStudent(String json) throws JDOMException, IOException, ParserConfigurationException {
         String student = "";
         if (this.EstudianteExiste(json)) {
@@ -422,6 +459,14 @@ public class UserDB {
         return student;
     }
 
+    /**
+     * Envia toda la informacion en disco de un conductor particular.
+     *
+     * @param json
+     * @return
+     * @throws JDOMException
+     * @throws IOException
+     */
     public String enviarDriver(String json) throws JDOMException, IOException {
         String driver = "";
         if (this.ConductorExiste(json)) {
@@ -460,8 +505,15 @@ public class UserDB {
         UserDB userDB = new UserDB();
         Gson gson = new Gson();
 
-        Conductor conductor = new Conductor("alexander", "sir", "1776", new Posicion(0,0));
-        userDB.RegistrarConductor(gson.toJson(conductor));
+        JsonParser jsonParser = new JsonParser();
+        String json = userDB.enviarStudent("{\"carnet\":20164321}");
+        System.out.println(json);
+
+        Conductor conductor = new Conductor("David", "contrasena", "20171234", new Posicion(2.45,7.74));
+        String jsonconductor = gson.toJson(conductor);
+        JsonObject jsonObject = jsonParser.parse(jsonconductor).getAsJsonObject();
+        jsonObject.remove("amigos");
+        System.out.println(gson.toJson(jsonObject));
 
         Estudiante estudiante = new Estudiante("carlos", "1234", "20164321",
                 new Posicion(3, 3));

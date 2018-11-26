@@ -6,10 +6,16 @@
   <amigos>
     <amigo>1776</amigo>
     <amigo>20171234</amigo>
+    <amigo>1776</amigo>
+    <amigo>20171234</amigo>
+    <amigo>20171234</amigo>
+    <amigo>20171234</amigo>
+    <amigo>1776</amigo>
+    <amigo>20171234</amigo>
   </amigos>
   <viajesRealizados>0</viajesRealizados>
-  <promedio>0</promedio>
-  <numCalificaciones>0</numCalificaciones>
+  <promedio>4.0</promedio>
+  <numCalificaciones>1</numCalificaciones>
   <posicionHogar>
     <lon>3.0</lon>
     <lat>3.0</lat>

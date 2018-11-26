@@ -1,5 +1,7 @@
 package entities;
 
+import com.google.gson.annotations.Expose;
+
 import java.util.LinkedList;
 
 /**
@@ -12,6 +14,7 @@ public class Estudiante {
     private String nombre;
     private String contrasena;
     private String carnet;
+    @Expose(serialize = false)
     private LinkedList<String> amigos;
     private int viajesRealizados;
     private int numCalificaciones;

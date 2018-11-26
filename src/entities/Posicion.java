@@ -1,5 +1,10 @@
 package entities;
 
+/**
+ * Sostiene posicion en terminos de latitud y longitud de un usuario
+ *
+ * @author Jose Antonio Cespedes
+ */
 public class Posicion {
     private double lat;
     private double lon;

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conductor>
+  <nombre>dud</nombre>
+  <contrasena>gg</contrasena>
+  <carnet>5901234123471</carnet>
+  <amigos />
+  <promedio>0</promedio>
+  <numCalificaciones>0</numCalificaciones>
+  <posicionHogar>
+    <lon>0.0</lon>
+    <lat>0.0</lat>
+  </posicionHogar>
+</conductor>

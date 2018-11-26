@@ -1,6 +1,7 @@
 package entities;
 
 import com.google.gson.Gson;
+import com.google.gson.annotations.Expose;
 
 import java.util.LinkedList;
 
@@ -14,6 +15,7 @@ public class Conductor {
     private String nombre;
     private String contrasena;
     private String carnet;
+    @Expose(serialize = false)
     private LinkedList<String> amigos;
     private int numCalificaciones;
     private Posicion posicionHogar;
